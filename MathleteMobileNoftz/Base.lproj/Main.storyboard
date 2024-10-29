@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xsQ-vb-cK4">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -16,24 +16,158 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mathlete Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-xN-aFL">
-                                <rect key="frame" x="16" y="59" width="361" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="40"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-9I-bP3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathlete Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-xN-aFL">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-6g-MiA">
+                                        <rect key="frame" x="0.0" y="99" width="393" height="313"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkW-cA-8mo">
+                                        <rect key="frame" x="0.0" y="451" width="393" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-HE-sbp">
+                                        <rect key="frame" x="0.0" y="552" width="393" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-vR-XRm">
+                                        <rect key="frame" x="0.0" y="653" width="393" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dho-xN-aFL" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="Cjm-wp-gk0"/>
+                                    <constraint firstItem="Dho-xN-aFL" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0839161" id="HnM-sI-GZ4"/>
+                                    <constraint firstItem="Sg0-HE-sbp" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="I6A-vo-r2J"/>
+                                    <constraint firstItem="P2O-vR-XRm" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="TKk-dR-NLO"/>
+                                    <constraint firstItem="RkW-cA-8mo" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Xcy-gC-GKg"/>
+                                    <constraint firstItem="P2O-vR-XRm" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Z4j-K5-c72"/>
+                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.220047" id="bew-Gg-msC"/>
+                                    <constraint firstItem="RkW-cA-8mo" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="tNJ-aC-JVV"/>
+                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="uXJ-fg-xAW"/>
+                                    <constraint firstItem="Sg0-HE-sbp" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="yF5-ly-WGP"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oqn-9I-bP3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MRp-oY-6Ye"/>
+                            <constraint firstItem="Oqn-9I-bP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cOD-YV-to1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oqn-9I-bP3" secondAttribute="bottom" id="kwd-2Y-oV5"/>
+                            <constraint firstItem="Oqn-9I-bP3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yJJ-6o-kKi"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sgI-yG-xwO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aSE-LK-kKf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xsQ-vb-cK4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eOg-iI-Uik">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Me-q8-4Io"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIn-ru-vnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vzb-3s-TWj">
+            <objects>
+                <viewController id="2xe-WL-IzL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y8t-f9-OUr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dp3-BA-yIp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSW-Tc-ppq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="739"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QLX-ea-FLd">
+            <objects>
+                <viewController id="O9y-Ja-1W6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8u-4k-KjC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sms-8N-Xmb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GjK-ec-41E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="739"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tnz-UN-x1E">
+            <objects>
+                <viewController id="y3b-lQ-yJr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pvC-IX-v8e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SZD-PR-d5n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sez-eC-X1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="1461"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PtD-BJ-0lP">
+            <objects>
+                <viewController id="pmX-fL-qH0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fAH-kR-jB1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xol-jy-4El"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puR-Ao-NaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="739"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
