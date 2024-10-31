@@ -24,6 +24,10 @@ class ViewStudentsViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CrazyCell
+
+        cell.labelOutlet1.text = cart[indexPath.row]
+
     }
     
     
