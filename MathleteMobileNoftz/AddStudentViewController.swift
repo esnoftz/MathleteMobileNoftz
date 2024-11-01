@@ -9,13 +9,38 @@ import UIKit
 
 class AddStudentViewController: UIViewController {
 
+    @IBOutlet weak var studentNameInput: UITextField!
+    
+    @IBOutlet weak var studentGradeInput: UITextField!
+    
+    @IBOutlet weak var addStudentErrorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
+    
+    @IBAction func addStudentAction(_ sender: UIButton) {
+        if studentNameInput.text == "" || studentGradeInput.text == "" {
+            addStudentErrorLabel.text = "Input both the name and grade of the student!"
+        } else {
+            if let trial = Int(studentGradeInput.text!) {
+                AppData.students.append(Student(name: studentNameInput.text!, grade: Int(studentGradeInput.text!)!))
+                addStudentErrorLabel.text = "Student Added!"
+                studentNameInput.text = ""
+                studentGradeInput.text = ""
+            } else {
+                addStudentErrorLabel.text = "Enter a valid grade!"
+            }
+        }
+        
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

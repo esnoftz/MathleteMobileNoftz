@@ -151,8 +151,11 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addStudentAction:" destination="Z3w-4K-zMw" eventType="touchUpInside" id="Qi3-zY-HXZ"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-PU-Bze">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-PU-Bze">
                                         <rect key="frame" x="0.0" y="56" width="393" height="56"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="22"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
@@ -174,6 +177,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Au-od-xbO"/>
+                    <connections>
+                        <outlet property="addStudentErrorLabel" destination="2ka-PU-Bze" id="rh4-gs-wq9"/>
+                        <outlet property="studentGradeInput" destination="mg7-Da-2ap" id="PMx-R6-EDc"/>
+                        <outlet property="studentNameInput" destination="YZU-3O-yjZ" id="03c-hv-HBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKg-G4-orP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,7 +196,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-6S-gT6">
-                                <rect key="frame" x="0.0" y="370" width="393" height="459"/>
+                                <rect key="frame" x="0.0" y="415" width="393" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="6LU-7L-XVy" customClass="CrazyCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
@@ -199,16 +207,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rTO-JV-uWR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="24.333333333333332"/>
+                                                    <rect key="frame" x="10" y="0.0" width="373" height="24.333333333333332"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-ZL-fOa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="24.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="24.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5B-B3-h9x">
-                                                            <rect key="frame" x="196.33333333333337" y="0.0" width="196.66666666666663" height="24.333333333333332"/>
+                                                            <rect key="frame" x="186.33333333333337" y="0.0" width="186.66666666666663" height="24.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -221,9 +229,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rTO-JV-uWR" firstAttribute="leading" secondItem="OTT-oa-AQC" secondAttribute="leading" id="2Xd-3Y-V6v"/>
                                                 <constraint firstAttribute="bottom" secondItem="rTO-JV-uWR" secondAttribute="bottom" id="2jV-ve-SDm"/>
-                                                <constraint firstAttribute="trailing" secondItem="rTO-JV-uWR" secondAttribute="trailing" id="Jzz-jB-zIb"/>
+                                                <constraint firstAttribute="trailing" secondItem="rTO-JV-uWR" secondAttribute="trailing" constant="10" id="Agr-uT-FmV"/>
+                                                <constraint firstItem="rTO-JV-uWR" firstAttribute="leading" secondItem="OTT-oa-AQC" secondAttribute="leading" constant="10" id="Mip-fc-7UN"/>
                                                 <constraint firstItem="rTO-JV-uWR" firstAttribute="top" secondItem="OTT-oa-AQC" secondAttribute="top" id="RJT-iv-ZXf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -235,7 +243,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-jm-Dsh">
-                                <rect key="frame" x="0.0" y="103" width="393" height="212"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="282"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-T3-mEp">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -263,21 +271,31 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteStudentAction:" destination="2xe-WL-IzL" eventType="touchUpInside" id="2da-mc-fCw"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-ks-1Op">
+                                        <rect key="frame" x="0.0" y="232" width="393" height="50"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Dtt-T3-mEp" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="J4C-Co-8M3"/>
                                     <constraint firstItem="P5W-hO-dAE" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="LA1-IO-93W"/>
                                     <constraint firstItem="boD-wO-Tqh" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="oQV-BC-O1X"/>
+                                    <constraint firstItem="DP2-ks-1Op" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="wqm-bE-cPq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dp3-BA-yIp"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CQT-6S-gT6" firstAttribute="top" secondItem="cMO-jm-Dsh" secondAttribute="bottom" constant="30" id="IXW-NF-0lF"/>
                             <constraint firstItem="cMO-jm-Dsh" firstAttribute="top" secondItem="Dp3-BA-yIp" secondAttribute="top" id="JKf-m7-Z1Y"/>
                             <constraint firstItem="CQT-6S-gT6" firstAttribute="trailing" secondItem="Dp3-BA-yIp" secondAttribute="trailing" id="VBa-4I-DiT"/>
-                            <constraint firstItem="CQT-6S-gT6" firstAttribute="top" secondItem="cMO-jm-Dsh" secondAttribute="bottom" constant="55" id="YIv-DR-feL"/>
                             <constraint firstItem="cMO-jm-Dsh" firstAttribute="leading" secondItem="Dp3-BA-yIp" secondAttribute="leading" id="a8H-yB-3hT"/>
                             <constraint firstAttribute="bottom" secondItem="CQT-6S-gT6" secondAttribute="bottom" constant="23" id="b5o-5n-NI3"/>
                             <constraint firstItem="CQT-6S-gT6" firstAttribute="leading" secondItem="Dp3-BA-yIp" secondAttribute="leading" id="mVc-oB-ENY"/>
@@ -285,6 +303,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uaq-8x-unL"/>
+                    <connections>
+                        <outlet property="allStudentsErrorLabel" destination="DP2-ks-1Op" id="Fkj-V4-4hD"/>
+                        <outlet property="viewStudentsTableView" destination="CQT-6S-gT6" id="k7Q-l7-Bya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSW-Tc-ppq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
