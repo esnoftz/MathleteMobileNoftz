@@ -12,14 +12,15 @@ class ViewStudentsViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var viewStudentsTableView: UITableView!
     
     @IBOutlet weak var allStudentsErrorLabel: UILabel!
-    
-    var index = -1
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewStudentsTableView.delegate = self
         viewStudentsTableView.dataSource = self
+        
+        //var studentList = AppData.defaults.array(forKey: "membersList")
+        //AppData.students = studentList
         
     }
     
@@ -30,26 +31,24 @@ class ViewStudentsViewController: UIViewController, UITableViewDelegate, UITable
 
     
     @IBAction func deleteStudentAction(_ sender: UIButton) {
-        if index != -1 {
-            AppData.students.remove(at: index)
+        if AppData.indexSelected != -1 {
+            print(AppData.indexSelected)
+            AppData.students.remove(at: AppData.indexSelected)
             viewStudentsTableView.reloadData()
             allStudentsErrorLabel.text = "Student deleted!"
-            index = -1
         } else {
             allStudentsErrorLabel.text = "Select a student to delete!"
+            print(AppData.indexSelected)
         }
+        AppData.indexSelected = -1
     }
     
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        index = indexPath.row
-        print(index)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.indexSelected = indexPath.row
+        print(AppData.indexSelected)
+        print(AppData.students[AppData.indexSelected].name)
     }
-    
-    
-    
-    
-    
     
     
     

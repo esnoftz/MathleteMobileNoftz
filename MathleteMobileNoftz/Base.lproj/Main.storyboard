@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-9I-bP3">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathlete Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-xN-aFL">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="37"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tiger Image" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-6g-MiA">
-                                        <rect key="frame" x="0.0" y="78" width="393" height="334"/>
+                                        <rect key="frame" x="0.0" y="76" width="393" height="299.66666666666669"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkW-cA-8mo">
-                                        <rect key="frame" x="0.0" y="451" width="393" height="62"/>
+                                        <rect key="frame" x="0.0" y="414.66666666666663" width="393" height="57.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="View Students">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-HE-sbp">
-                                        <rect key="frame" x="0.0" y="552" width="393" height="62"/>
+                                        <rect key="frame" x="0.0" y="511.33333333333337" width="393" height="58"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Create Teams">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-vR-XRm">
-                                        <rect key="frame" x="0.0" y="653" width="393" height="62"/>
+                                        <rect key="frame" x="0.0" y="608.33333333333337" width="393" height="57.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Previous Competitions">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -69,7 +69,7 @@
                                     <constraint firstItem="Dho-xN-aFL" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="Cjm-wp-gk0"/>
                                     <constraint firstItem="Sg0-HE-sbp" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="I6A-vo-r2J"/>
                                     <constraint firstItem="P2O-vR-XRm" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="TKk-dR-NLO"/>
-                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.467133" id="XJq-U2-fnD"/>
+                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.45" id="XJq-U2-fnD"/>
                                     <constraint firstItem="RkW-cA-8mo" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Xcy-gC-GKg"/>
                                     <constraint firstItem="P2O-vR-XRm" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Z4j-K5-c72"/>
                                     <constraint firstItem="RkW-cA-8mo" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="tNJ-aC-JVV"/>
@@ -87,7 +87,25 @@
                             <constraint firstItem="Oqn-9I-bP3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yJJ-6o-kKi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sgI-yG-xwO"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sgI-yG-xwO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NPY-ox-eY8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="YAd-au-UFD">
+                                <rect key="frame" x="307" y="0.0" width="70" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.76304768040000004" green="0.24877524670000001" blue="0.19262533200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxM-d5-g0h"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,28 +138,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="O31-wF-fn1">
-                                <rect key="frame" x="0.0" y="103" width="393" height="233"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="184"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Student" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7G-4s-hP4">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50.666666666666664"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter student's name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZU-3O-yjZ">
-                                        <rect key="frame" x="0.0" y="83" width="393" height="67"/>
+                                        <rect key="frame" x="0.0" y="66.666666666666657" width="393" height="50.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter student's grade" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mg7-Da-2ap">
-                                        <rect key="frame" x="0.0" y="166" width="393" height="67"/>
+                                        <rect key="frame" x="0.0" y="133.33333333333334" width="393" height="50.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ef7-Cj-7Iv">
-                                <rect key="frame" x="0.0" y="401" width="393" height="112"/>
+                                <rect key="frame" x="0.0" y="352" width="393" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-dH-xlT">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>

@@ -9,6 +9,10 @@ import UIKit
 
 class AppData {
     static var students = [Student]()
+    static var indexSelected = -1
+    static var defaults = UserDefaults.standard
+    static var encoder = JSONEncoder()
+    static var decoder = JSONDecoder()
 }
 
 class ViewController: UIViewController {
@@ -81,6 +85,13 @@ class ViewController: UIViewController {
 
         
     }
+    
+    
+    @IBAction func saveAction(_ sender: UIButton) {
+        
+        
+    }
+    
 
 
 }
