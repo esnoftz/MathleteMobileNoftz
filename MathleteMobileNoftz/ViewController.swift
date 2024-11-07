@@ -83,13 +83,35 @@ class ViewController: UIViewController {
         AppData.students.append(Student(name: "Justin Weber", grade: 12))
         AppData.students.append(Student(name: "Seth White", grade: 12))
 
+        /*var student = AppData.defaults.object(forKey: "studentsList")
+        if let s = student {
+            let ss = s as! [Student] // casting to string array (guarenteed)
+            for something in ss {
+                print(something)
+            }
+        }*/
+        
+        if let allStudents = AppData.defaults.data(forKey: "studentsList") {
+
+            // decoding the data stored in blahDogs into objects in a Dog array
+            if let inStudents = try? AppData.decoder.decode([Student].self, from: allStudents) {
+                AppData.students = inStudents
+                
+                for s in AppData.students {
+                    print(s.name)
+                }
+                
+            }
+            
+        }
         
     }
     
     
     @IBAction func saveAction(_ sender: UIButton) {
-        
-        
+        if let studentsTest = try? AppData.encoder.encode(AppData.students) {    // safe unwrap!
+            AppData.defaults.set(studentsTest, forKey: "studentsList")
+        }
     }
     
 
