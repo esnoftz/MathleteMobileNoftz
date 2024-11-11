@@ -1,24 +1,23 @@
 //
-//  CreateTeamsViewController.swift
+//  CalculatorViewTeamViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/7/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class CreateTeamsViewController: UIViewController {
-    
+class CalculatorViewTeamViewController: UIViewController {
+
+    @IBOutlet weak var calculatorTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for person in AppData.calculatorTeam {
+            calculatorTextView.text += "\(person.name)    (\(person.grade))\n"
+        }
     }
-    
-    
-    
-    
-    
     
 
     /*

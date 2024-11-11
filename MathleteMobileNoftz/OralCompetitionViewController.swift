@@ -1,48 +1,51 @@
 //
-//  JrSrViewController.swift
+//  OralCompetitionViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/7/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class OralCompetitionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    @IBOutlet weak var jrSrTableView: UITableView!
+    @IBOutlet weak var oralCompTableView: UITableView!
     
-    @IBOutlet weak var jrSrErrorLabel: UILabel!
+    @IBOutlet weak var oralCompErrorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jrSrTableView.delegate = self
-        jrSrTableView.dataSource = self
+        oralCompTableView.delegate = self
+        oralCompTableView.dataSource = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        jrSrTableView.reloadData()
+        oralCompTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.indexSelected = indexPath.row
-        jrSrErrorLabel.text = ""
+        oralCompErrorLabel.text = ""
     }
     
-    @IBAction func addToJrSrAction(_ sender: UIButton) {
+    
+    @IBAction func addToOralCompAction(_ sender: UIButton) {
         if AppData.indexSelected != -1 {
-            AppData.jrSrTeam.append(AppData.students[AppData.indexSelected])
-            jrSrErrorLabel.text = "Student added to team!"
+            AppData.oralCompTeam.append(AppData.students[AppData.indexSelected])
+            oralCompErrorLabel.text = "Student added to team!"
         } else {
-            jrSrErrorLabel.text = "Select a student!"
+            oralCompErrorLabel.text = "Select a student!"
         }
         AppData.indexSelected = -1
     }
     
-    @IBAction func jrSrViewTeamAction(_ sender: UIButton) {
-        jrSrErrorLabel.text = ""
+    @IBAction func oralCompViewTeamAction(_ sender: UIButton) {
+        oralCompErrorLabel.text = ""
     }
+    
     
     
     
@@ -56,14 +59,19 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell3 = tableView.dequeueReusableCell(withIdentifier: "myCell3") as! JrSrCell
+        let cell5 = tableView.dequeueReusableCell(withIdentifier: "myCell5") as! OralCompCell
 
-        cell3.nameLabel.text = AppData.students[indexPath.row].name
-        cell3.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+        cell5.nameLabel.text = AppData.students[indexPath.row].name
+        cell5.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
         
-        return cell3
+        return cell5
 
     }
+    
+    
+    
+    
+    
     
     
     

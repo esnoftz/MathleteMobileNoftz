@@ -1,24 +1,24 @@
 //
-//  CreateTeamsViewController.swift
+//  TwoPersonViewTeamViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/7/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class CreateTeamsViewController: UIViewController {
+class TwoPersonViewTeamViewController: UIViewController {
+
+    @IBOutlet weak var twoPersonTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for person in AppData.twoPersonTeam {
+            twoPersonTextView.text += "\(person.name)    (\(person.grade))\n"
+        }
     }
-    
-    
-    
-    
-    
     
 
     /*

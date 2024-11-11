@@ -13,6 +13,12 @@ class AppData {
     static var defaults = UserDefaults.standard
     static var encoder = JSONEncoder()
     static var decoder = JSONDecoder()
+    static var froshSophTeam = [Student]()
+    static var jrSrTeam = [Student]()
+    static var twoPersonTeam = [Student]()
+    static var oralCompTeam = [Student]()
+    static var calculatorTeam = [Student]()
+    static var competitions = [Competition]()
 }
 
 class ViewController: UIViewController {
@@ -105,12 +111,30 @@ class ViewController: UIViewController {
             
         }
         
+        if let allCompetitions = AppData.defaults.data(forKey: "competitionsList") {
+
+            // decoding the data stored in blahDogs into objects in a Dog array
+            if let inCompetitions = try? AppData.decoder.decode([Competition].self, from: allCompetitions) {
+                AppData.competitions = inCompetitions
+                
+                for c in AppData.competitions {
+                    print(c.competitionName)
+                }
+                
+            }
+            
+        }
+        
     }
     
     
     @IBAction func saveAction(_ sender: UIButton) {
         if let studentsTest = try? AppData.encoder.encode(AppData.students) {    // safe unwrap!
             AppData.defaults.set(studentsTest, forKey: "studentsList")
+        }
+        
+        if let competitionsText = try? AppData.encoder.encode(AppData.competitions) {    // safe unwrap!
+            AppData.defaults.set(competitionsText, forKey: "competitionsList")
         }
     }
     

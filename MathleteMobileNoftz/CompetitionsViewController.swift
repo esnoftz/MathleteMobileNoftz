@@ -7,14 +7,33 @@
 
 import UIKit
 
-class CompetitionsViewController: UIViewController {
+class CompetitionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var competitionsTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        competitionsTableView.delegate = self
+        competitionsTableView.dataSource = self
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        AppData.competitions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell7 = tableView.dequeueReusableCell(withIdentifier: "myCell7") as! CompetitionCell
+
+        cell7.competitionLabel.text = AppData.competitions[indexPath.row].competitionName
+        
+        return cell7
+
+    }
 
     /*
     // MARK: - Navigation

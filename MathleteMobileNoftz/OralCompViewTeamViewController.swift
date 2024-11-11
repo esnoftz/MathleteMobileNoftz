@@ -1,24 +1,24 @@
 //
-//  CreateTeamsViewController.swift
+//  OralCompViewTeamViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/7/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class CreateTeamsViewController: UIViewController {
+class OralCompViewTeamViewController: UIViewController {
+
+    @IBOutlet weak var oralCompTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for person in AppData.oralCompTeam {
+            oralCompTextView.text += "\(person.name)    (\(person.grade))\n"
+        }
     }
-    
-    
-    
-    
-    
     
 
     /*

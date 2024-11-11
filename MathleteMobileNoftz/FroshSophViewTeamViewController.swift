@@ -1,24 +1,25 @@
 //
-//  CreateTeamsViewController.swift
+//  FroshSophViewTeamViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/7/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class CreateTeamsViewController: UIViewController {
+class FroshSophViewTeamViewController: UIViewController {
+
+    @IBOutlet weak var froshSophTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for person in AppData.froshSophTeam {
+            froshSophTextView.text += "\(person.name)    (\(person.grade))\n"
+        }
+        
     }
-    
-    
-    
-    
-    
     
 
     /*
