@@ -21,6 +21,14 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "competitionViewSegue", sender: nil)
+    }
+    
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         AppData.competitions.count
     }

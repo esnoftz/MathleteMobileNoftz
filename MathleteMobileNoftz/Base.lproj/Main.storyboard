@@ -458,21 +458,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="rvr-DC-LFM">
-                                <rect key="frame" x="0.0" y="203" width="393" height="420"/>
+                                <rect key="frame" x="0.0" y="203" width="393" height="428"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Current Competition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kc-vV-AEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of competition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2Y-AU-vUh">
-                                        <rect key="frame" x="0.0" y="172" width="393" height="63"/>
+                                        <rect key="frame" x="0.0" y="166" width="393" height="64.333333333333314"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-mM-07q">
-                                        <rect key="frame" x="0.0" y="281" width="393" height="63"/>
+                                        <rect key="frame" x="0.0" y="276.33333333333331" width="393" height="64"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save Competition">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -484,7 +484,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YK-xM-i2B">
-                                        <rect key="frame" x="0.0" y="390" width="393" height="30"/>
+                                        <rect key="frame" x="0.0" y="386.33333333333337" width="393" height="41.666666666666686"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
@@ -1490,11 +1490,201 @@
                     <navigationItem key="navigationItem" id="giq-Cr-24c"/>
                     <connections>
                         <outlet property="competitionsTableView" destination="bMW-Gt-bS9" id="j5W-y5-wHV"/>
+                        <segue destination="At6-zt-4MP" kind="show" identifier="competitionViewSegue" id="gjd-rQ-BFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puR-Ao-NaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2543" y="4"/>
+        </scene>
+        <!--View Competition View Controller-->
+        <scene sceneID="iDj-YQ-6ZK">
+            <objects>
+                <viewController id="At6-zt-4MP" customClass="ViewCompetitionViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYm-0H-wnr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4Yh-av-PMY">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Et-Wo-SGU">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQI-Zf-Yeh">
+                                        <rect key="frame" x="0.0" y="131.33333333333334" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Frosh/Soph 8-Person">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Zol-JE-CKO" kind="show" identifier="froshSophCompSegue" id="29l-NF-bmE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKv-6d-OMA">
+                                        <rect key="frame" x="0.0" y="252.33333333333331" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Jr/Sr 8-Person">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="00w-zW-pbq" kind="show" identifier="jrSrCompSegue" id="mEJ-Ce-9aE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHe-Ju-4NE">
+                                        <rect key="frame" x="0.0" y="373.66666666666669" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="2-Person">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="uT5-id-xGB" kind="show" identifier="twoPersonCompSegue" id="hbX-FM-dab"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-gy-7Qu">
+                                        <rect key="frame" x="0.0" y="494.66666666666663" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Oral Competition">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="YDx-sk-djv" kind="show" identifier="oralCompViewSegue" id="U6Y-VY-csd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vod-qK-k2z">
+                                        <rect key="frame" x="0.0" y="616" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calculator">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="iC4-Y7-HA2" kind="show" identifier="calculatorCompSegue" id="bbL-mG-sYK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vod-qK-k2z" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0750751" id="0o7-Qb-Dje"/>
+                                    <constraint firstItem="dQI-Zf-Yeh" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0750751" id="1yj-oO-SCc"/>
+                                    <constraint firstItem="3Et-Wo-SGU" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="CNB-gF-stx"/>
+                                    <constraint firstItem="eKv-6d-OMA" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0750751" id="VHd-BV-QIa"/>
+                                    <constraint firstItem="fYb-gy-7Qu" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="b2m-Gl-0a1"/>
+                                    <constraint firstItem="3Et-Wo-SGU" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0900901" id="fK9-a9-4wZ"/>
+                                    <constraint firstItem="fYb-gy-7Qu" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0750751" id="gyQ-KA-QNo"/>
+                                    <constraint firstItem="tHe-Ju-4NE" firstAttribute="height" secondItem="4Yh-av-PMY" secondAttribute="height" multiplier="0.0750751" id="nTO-IE-lL7"/>
+                                    <constraint firstItem="dQI-Zf-Yeh" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="nrf-cX-akk"/>
+                                    <constraint firstItem="tHe-Ju-4NE" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="qcH-se-Noa"/>
+                                    <constraint firstItem="eKv-6d-OMA" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="r8V-Ds-Hco"/>
+                                    <constraint firstItem="Vod-qK-k2z" firstAttribute="width" secondItem="4Yh-av-PMY" secondAttribute="width" id="ukE-RZ-iVa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J80-Zx-Xax"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Yh-av-PMY" firstAttribute="leading" secondItem="J80-Zx-Xax" secondAttribute="leading" id="3R0-FW-hcw"/>
+                            <constraint firstItem="J80-Zx-Xax" firstAttribute="trailing" secondItem="4Yh-av-PMY" secondAttribute="trailing" id="4Wt-Ik-56w"/>
+                            <constraint firstItem="4Yh-av-PMY" firstAttribute="top" secondItem="J80-Zx-Xax" secondAttribute="top" id="N3o-fK-UIq"/>
+                            <constraint firstItem="J80-Zx-Xax" firstAttribute="bottom" secondItem="4Yh-av-PMY" secondAttribute="bottom" id="VTu-Hs-ZPo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fyE-Gp-r1k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozQ-QT-EIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3509" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cGc-Pf-EX8">
+            <objects>
+                <viewController id="Zol-JE-CKO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zF3-WT-ffi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rXQ-3K-Pyu"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uUo-xl-pZK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGS-Pq-le5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4251" y="-713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IOZ-wa-khI">
+            <objects>
+                <viewController id="00w-zW-pbq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pnT-R0-Pdk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tAz-3k-Ok4"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GcI-Ax-BhT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5I-dR-eE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4973" y="-334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NSt-Yi-bgB">
+            <objects>
+                <viewController id="iC4-Y7-HA2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEm-rF-CyX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h6J-5w-clU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lr9-1D-9wx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDg-Al-T7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4066" y="849"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bfr-Dt-5St">
+            <objects>
+                <viewController id="YDx-sk-djv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kgx-pc-kan">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="plo-Kq-ObH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="14Z-TG-0Qq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgb-5g-geq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4972" y="470"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1yr-bm-pMd">
+            <objects>
+                <viewController id="uT5-id-xGB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4pX-Ta-yYR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ygp-AN-uKX"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w3S-Ga-C2A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2m-ra-rNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5665" y="35"/>
         </scene>
     </scenes>
     <resources>

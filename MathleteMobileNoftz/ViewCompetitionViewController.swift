@@ -1,29 +1,20 @@
 //
-//  CalculatorViewTeamViewController.swift
+//  ViewCompetitionViewController.swift
 //  MathleteMobileNoftz
 //
-//  !Created by David Noftz on 11/11/24.
+//  Created by EVANGELINE NOFTZ on 11/11/24.
 //
 
 import UIKit
 
-class CalculatorViewTeamViewController: UIViewController {
+class ViewCompetitionViewController: UIViewController {
 
-    @IBOutlet weak var calculatorTextView: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        calculatorTextView.text += printPeople()
+
+        // Do any additional setup after loading the view.
     }
     
-    func printPeople() -> String{
-        var peoples = ""
-        for person in AppData.calculatorTeam {
-            peoples += "\(person.name)    (\(person.grade))\n"
-        }
-        return peoples
-    }
 
     /*
     // MARK: - Navigation
