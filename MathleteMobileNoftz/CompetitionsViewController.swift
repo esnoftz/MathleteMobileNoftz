@@ -20,9 +20,14 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
         competitionsTableView.dataSource = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AppData.indexSelected = -1
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "competitionViewSegue", sender: nil)
+        AppData.indexSelected = indexPath.row
     }
     
     

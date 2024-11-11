@@ -43,7 +43,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-HE-sbp">
                                         <rect key="frame" x="0.0" y="511.33333333333337" width="393" height="58"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Create Teams">
+                                        <buttonConfiguration key="configuration" style="filled" title="New Competition">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -1508,7 +1508,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4Yh-av-PMY">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Et-Wo-SGU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Et-Wo-SGU">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
@@ -1601,86 +1601,254 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fyE-Gp-r1k"/>
+                    <connections>
+                        <outlet property="competitionNameLabel" destination="3Et-Wo-SGU" id="t96-3f-eLB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozQ-QT-EIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3509" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Comp Frosh Soph View Controller-->
         <scene sceneID="cGc-Pf-EX8">
             <objects>
-                <viewController id="Zol-JE-CKO" sceneMemberID="viewController">
+                <viewController id="Zol-JE-CKO" customClass="CompFroshSophViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zF3-WT-ffi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mFY-s3-kpZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frosh/Soph 8-Person Team" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3F-Hj-Vrh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NP2-Vb-5wW">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N3F-Hj-Vrh" firstAttribute="height" secondItem="mFY-s3-kpZ" secondAttribute="height" multiplier="0.3" id="E3H-Tm-Lxz"/>
+                                    <constraint firstItem="NP2-Vb-5wW" firstAttribute="height" secondItem="mFY-s3-kpZ" secondAttribute="height" multiplier="0.7" id="IMd-Hd-pNw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rXQ-3K-Pyu"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mFY-s3-kpZ" secondAttribute="trailing" id="0bh-39-2de"/>
+                            <constraint firstItem="mFY-s3-kpZ" firstAttribute="top" secondItem="rXQ-3K-Pyu" secondAttribute="top" id="Rgd-7o-xOr"/>
+                            <constraint firstItem="rXQ-3K-Pyu" firstAttribute="bottom" secondItem="mFY-s3-kpZ" secondAttribute="bottom" id="YcQ-xj-10d"/>
+                            <constraint firstItem="mFY-s3-kpZ" firstAttribute="leading" secondItem="rXQ-3K-Pyu" secondAttribute="leading" id="e8P-tE-izV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uUo-xl-pZK"/>
+                    <connections>
+                        <outlet property="compFroshSophTextView" destination="NP2-Vb-5wW" id="Yzj-2O-fPK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGS-Pq-le5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4251" y="-713"/>
+            <point key="canvasLocation" x="4249.6183206106871" y="-713.38028169014092"/>
         </scene>
-        <!--View Controller-->
+        <!--Comp Jr Sr View Controller-->
         <scene sceneID="IOZ-wa-khI">
             <objects>
-                <viewController id="00w-zW-pbq" sceneMemberID="viewController">
+                <viewController id="00w-zW-pbq" customClass="CompJrSrViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnT-R0-Pdk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-F1-q6e">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jr/Sr 8-Person Team" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kz-9C-pMa">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RVa-xj-IcJ">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7kz-9C-pMa" firstAttribute="height" secondItem="pqH-F1-q6e" secondAttribute="height" multiplier="0.3" id="E5s-gr-ZVW"/>
+                                    <constraint firstItem="RVa-xj-IcJ" firstAttribute="height" secondItem="pqH-F1-q6e" secondAttribute="height" multiplier="0.7" id="ElS-wx-WGM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tAz-3k-Ok4"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pqH-F1-q6e" firstAttribute="leading" secondItem="tAz-3k-Ok4" secondAttribute="leading" id="6zH-1T-RBL"/>
+                            <constraint firstItem="pqH-F1-q6e" firstAttribute="top" secondItem="tAz-3k-Ok4" secondAttribute="top" id="T5w-4d-gVV"/>
+                            <constraint firstItem="tAz-3k-Ok4" firstAttribute="bottom" secondItem="pqH-F1-q6e" secondAttribute="bottom" id="bsu-Gh-h8K"/>
+                            <constraint firstAttribute="trailing" secondItem="pqH-F1-q6e" secondAttribute="trailing" id="ecW-yk-qea"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GcI-Ax-BhT"/>
+                    <connections>
+                        <outlet property="compJrSrTextView" destination="RVa-xj-IcJ" id="neq-7A-WWz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5I-dR-eE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4973" y="-334"/>
+            <point key="canvasLocation" x="4971.7557251908393" y="-334.50704225352115"/>
         </scene>
-        <!--View Controller-->
+        <!--Comp Calculator View Controller-->
         <scene sceneID="NSt-Yi-bgB">
             <objects>
-                <viewController id="iC4-Y7-HA2" sceneMemberID="viewController">
+                <viewController id="iC4-Y7-HA2" customClass="CompCalculatorViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lEm-rF-CyX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RAW-zY-CKO">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olH-cU-kyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-3I-DlQ">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CHA-3I-DlQ" firstAttribute="height" secondItem="RAW-zY-CKO" secondAttribute="height" multiplier="0.7" id="Vnw-dR-W6G"/>
+                                    <constraint firstItem="olH-cU-kyh" firstAttribute="height" secondItem="RAW-zY-CKO" secondAttribute="height" multiplier="0.3" id="rSG-og-bcF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h6J-5w-clU"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RAW-zY-CKO" firstAttribute="leading" secondItem="h6J-5w-clU" secondAttribute="leading" id="Ibh-TF-4Wk"/>
+                            <constraint firstItem="h6J-5w-clU" firstAttribute="bottom" secondItem="RAW-zY-CKO" secondAttribute="bottom" id="ShG-UA-5KK"/>
+                            <constraint firstItem="h6J-5w-clU" firstAttribute="trailing" secondItem="RAW-zY-CKO" secondAttribute="trailing" id="bEE-j2-bN6"/>
+                            <constraint firstItem="RAW-zY-CKO" firstAttribute="top" secondItem="h6J-5w-clU" secondAttribute="top" id="fBR-v2-w4J"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lr9-1D-9wx"/>
+                    <connections>
+                        <outlet property="compCalculatorTextView" destination="CHA-3I-DlQ" id="5qT-AU-wse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDg-Al-T7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4066" y="849"/>
         </scene>
-        <!--View Controller-->
+        <!--Comp Oral View Controller-->
         <scene sceneID="Bfr-Dt-5St">
             <objects>
-                <viewController id="YDx-sk-djv" sceneMemberID="viewController">
+                <viewController id="YDx-sk-djv" customClass="CompOralViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kgx-pc-kan">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ces-rE-e65">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oral Competition Team" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sk-9L-Xeh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zag-53-c9i">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zag-53-c9i" firstAttribute="height" secondItem="ces-rE-e65" secondAttribute="height" multiplier="0.7" id="8T5-y3-TW4"/>
+                                    <constraint firstItem="0sk-9L-Xeh" firstAttribute="height" secondItem="ces-rE-e65" secondAttribute="height" multiplier="0.3" id="Mwf-2w-RoG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="plo-Kq-ObH"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ces-rE-e65" secondAttribute="trailing" id="A8R-nH-gpm"/>
+                            <constraint firstItem="plo-Kq-ObH" firstAttribute="bottom" secondItem="ces-rE-e65" secondAttribute="bottom" id="a67-Rl-EL1"/>
+                            <constraint firstItem="ces-rE-e65" firstAttribute="top" secondItem="plo-Kq-ObH" secondAttribute="top" id="bwP-kg-zMn"/>
+                            <constraint firstItem="ces-rE-e65" firstAttribute="leading" secondItem="plo-Kq-ObH" secondAttribute="leading" id="yW8-26-nQe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="14Z-TG-0Qq"/>
+                    <connections>
+                        <outlet property="compOralTextView" destination="zag-53-c9i" id="ArM-vK-iLh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgb-5g-geq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4972" y="470"/>
+            <point key="canvasLocation" x="4971.7557251908393" y="469.71830985915494"/>
         </scene>
-        <!--View Controller-->
+        <!--Comp Two Person View Controller-->
         <scene sceneID="1yr-bm-pMd">
             <objects>
-                <viewController id="uT5-id-xGB" sceneMemberID="viewController">
+                <viewController id="uT5-id-xGB" customClass="CompTwoPersonViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pX-Ta-yYR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-YP-rnU">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-Person Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-gL-SlR">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mJh-6K-GZX">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mJh-6K-GZX" firstAttribute="height" secondItem="6Pa-YP-rnU" secondAttribute="height" multiplier="0.7" id="7CF-5V-sZK"/>
+                                    <constraint firstItem="NnB-gL-SlR" firstAttribute="height" secondItem="6Pa-YP-rnU" secondAttribute="height" multiplier="0.3" id="cAW-sY-65I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ygp-AN-uKX"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Pa-YP-rnU" firstAttribute="top" secondItem="ygp-AN-uKX" secondAttribute="top" id="6aI-Gw-ZOL"/>
+                            <constraint firstItem="6Pa-YP-rnU" firstAttribute="leading" secondItem="ygp-AN-uKX" secondAttribute="leading" id="9KE-zt-VJX"/>
+                            <constraint firstItem="ygp-AN-uKX" firstAttribute="trailing" secondItem="6Pa-YP-rnU" secondAttribute="trailing" id="E95-f4-WpE"/>
+                            <constraint firstItem="ygp-AN-uKX" firstAttribute="bottom" secondItem="6Pa-YP-rnU" secondAttribute="bottom" id="n7N-GX-9of"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w3S-Ga-C2A"/>
+                    <connections>
+                        <outlet property="compTwoPersonTextView" destination="mJh-6K-GZX" id="FgT-yG-JMe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2m-ra-rNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

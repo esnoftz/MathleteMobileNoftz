@@ -1,21 +1,23 @@
 //
-//  ViewCompetitionViewController.swift
+//  CompCalculatorViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/11/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class ViewCompetitionViewController: UIViewController {
+class CompCalculatorViewController: UIViewController {
 
-    @IBOutlet weak var competitionNameLabel: UILabel!
+    @IBOutlet weak var compCalculatorTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        competitionNameLabel.text = AppData.competitions[AppData.indexSelected].competitionName
-        
+        for person in AppData.competitions[AppData.indexSelected].calculatorTeam {
+            compCalculatorTextView.text += "\(person.name)   (\(person.grade))\n"
+        }
+
     }
     
 

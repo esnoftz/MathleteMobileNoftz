@@ -1,20 +1,23 @@
 //
-//  ViewCompetitionViewController.swift
+//  CompTwoPersonViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/11/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class ViewCompetitionViewController: UIViewController {
+class CompTwoPersonViewController: UIViewController {
 
-    @IBOutlet weak var competitionNameLabel: UILabel!
+    @IBOutlet weak var compTwoPersonTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        competitionNameLabel.text = AppData.competitions[AppData.indexSelected].competitionName
+        for person in AppData.competitions[AppData.indexSelected].twoPersonTeam {
+            compTwoPersonTextView.text += "\(person.name)   (\(person.grade))\n"
+        }
+
         
     }
     

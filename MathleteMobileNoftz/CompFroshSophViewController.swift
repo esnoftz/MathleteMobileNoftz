@@ -1,20 +1,23 @@
 //
-//  ViewCompetitionViewController.swift
+//  CompFroshSophViewController.swift
 //  MathleteMobileNoftz
 //
-//  Created by EVANGELINE NOFTZ on 11/11/24.
+//  Created by David Noftz on 11/11/24.
 //
 
 import UIKit
 
-class ViewCompetitionViewController: UIViewController {
+class CompFroshSophViewController: UIViewController {
 
-    @IBOutlet weak var competitionNameLabel: UILabel!
+    @IBOutlet weak var compFroshSophTextView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        competitionNameLabel.text = AppData.competitions[AppData.indexSelected].competitionName
+        for person in AppData.competitions[AppData.indexSelected].froshSophTeam {
+            compFroshSophTextView.text += "\(person.name)   (\(person.grade))\n"
+        }
         
     }
     

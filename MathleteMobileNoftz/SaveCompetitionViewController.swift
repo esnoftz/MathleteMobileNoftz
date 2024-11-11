@@ -25,10 +25,16 @@ class SaveCompetitionViewController: UIViewController {
         
         if competitionNameTextField.text != "" {
             AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: competitionNameTextField.text!))
+            AppData.froshSophTeam = [Student]()
+            AppData.jrSrTeam = [Student]()
+            AppData.twoPersonTeam = [Student]()
+            AppData.oralCompTeam = [Student]()
+            AppData.calculatorTeam = [Student]()
             saveCompetitionErrorLabel.text = "Competition saved!"
         } else {
             saveCompetitionErrorLabel.text = "Enter the competition name!"
         }
+        competitionNameTextField.text = ""
         
     }
     
