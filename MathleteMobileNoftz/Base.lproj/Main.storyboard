@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKg-G4-orP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-897" y="871"/>
+            <point key="canvasLocation" x="-1204" y="1268"/>
         </scene>
         <!--View Students View Controller-->
         <scene sceneID="Vzb-3s-TWj">
@@ -324,6 +324,7 @@
                     <connections>
                         <outlet property="allStudentsErrorLabel" destination="DP2-ks-1Op" id="Fkj-V4-4hD"/>
                         <outlet property="viewStudentsTableView" destination="CQT-6S-gT6" id="k7Q-l7-Bya"/>
+                        <segue destination="LJr-B4-LfN" kind="show" identifier="profileSegue" id="wQO-Cv-wBi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSW-Tc-ppq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1428,6 +1429,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8L-Gl-hWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2545.801526717557" y="1624.6478873239437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zU5-28-eXc">
+            <objects>
+                <viewController id="LJr-B4-LfN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmq-Id-fXH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-zU-tYp">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-gB-qQH">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-LQ-tgL">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MWG-gB-qQH" firstAttribute="height" secondItem="ogU-zU-tYp" secondAttribute="height" multiplier="0.3" id="9RS-DG-zHI"/>
+                                    <constraint firstItem="Dsm-LQ-tgL" firstAttribute="height" secondItem="ogU-zU-tYp" secondAttribute="height" multiplier="0.7" id="VYh-bz-Ceg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dbB-RA-65F"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ogU-zU-tYp" firstAttribute="leading" secondItem="dbB-RA-65F" secondAttribute="leading" id="Hdm-GQ-57I"/>
+                            <constraint firstItem="dbB-RA-65F" firstAttribute="bottom" secondItem="ogU-zU-tYp" secondAttribute="bottom" id="LQN-G1-hm1"/>
+                            <constraint firstItem="dbB-RA-65F" firstAttribute="trailing" secondItem="ogU-zU-tYp" secondAttribute="trailing" id="aT9-uc-Oql"/>
+                            <constraint firstItem="ogU-zU-tYp" firstAttribute="top" secondItem="dbB-RA-65F" secondAttribute="top" id="oFi-uv-Aad"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4uf-h0-Fkf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4W-NC-ZAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1205" y="470"/>
         </scene>
         <!--Competitions View Controller-->
         <scene sceneID="PtD-BJ-0lP">
