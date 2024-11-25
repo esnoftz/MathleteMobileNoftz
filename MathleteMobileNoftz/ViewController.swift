@@ -40,17 +40,17 @@ class ViewController: UIViewController {
         
         
         // SOPHOMORES
-        AppData.students.append(Student(name: "Oli Bajkiewicz", grade: 10))
+        AppData.students.append(Student(name: "Oli Bajkiewicz", grade: 10, mathCourses: ["H Geometry","H Algebra II w/ Trig","H Pre-calculus"], testScores: [0], awards: ["N/A"], compsAttended: ["N/A"]))
         AppData.students.append(Student(name: "Malwina Bendyk", grade: 10))
         AppData.students.append(Student(name: "Avery Chan", grade: 10))
         AppData.students.append(Student(name: "Shane Coffey", grade: 10))
         AppData.students.append(Student(name: "Luke Farrell", grade: 10))
         AppData.students.append(Student(name: "Skyler Ferrero", grade: 10))
-        AppData.students.append(Student(name: "Jackson Gerambia", grade: 10))
+        AppData.students.append(Student(name: "Jackson Gerambia", grade: 10, mathCourses: ["H Geometry","H Algebra II w/ Trig","H Pre-calculus"], testScores: [0], awards: ["N/A"], compsAttended: ["N/A"]))
         AppData.students.append(Student(name: "Riya Gupte", grade: 10))
         AppData.students.append(Student(name: "Alex Herrera", grade: 10))
-        AppData.students.append(Student(name: "Sammy Koscielski", grade: 10))
-        AppData.students.append(Student(name: "Giada Lipkie", grade: 10))
+        AppData.students.append(Student(name: "Sammy Koscielski", grade: 10, mathCourses: ["H Geometry","H Algebra II w/ Trig"], testScores: [0], awards: ["N/A"], compsAttended: ["N/A"]))
+        AppData.students.append(Student(name: "Giada Lipkie", grade: 10, mathCourses: ["H Algebra II w/ Trig","H Pre-calculus"], testScores: [0], awards: ["N/A"], compsAttended: ["N/A"]))
         AppData.students.append(Student(name: "Al Meyer", grade: 10))
         AppData.students.append(Student(name: "Aaron Mogilinski", grade: 10))
         AppData.students.append(Student(name: "Suhani Patel", grade: 10))
