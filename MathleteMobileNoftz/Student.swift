@@ -16,7 +16,7 @@ class Student: Codable {
     var compsAttended = [String]()
     //var picture
 
-    init(name: String, grade: Int, mathCourses: [String] = [String](), testScores: [Int] = [Int](), awards: [String] = [String](), compsAttended: [String] = [String]()) {
+    init(name: String, grade: Int, mathCourses: [String], testScores: [Int], awards: [String], compsAttended: [String]) {
         self.name = name
         self.grade = grade
         self.mathCourses = mathCourses

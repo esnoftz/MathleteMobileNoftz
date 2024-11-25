@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         AppData.students.append(Student(name: "Kavya Karthi", grade: 12))
         AppData.students.append(Student(name: "Mason McIntyre", grade: 12))
         AppData.students.append(Student(name: "Conor Naughton", grade: 12))
-        AppData.students.append(Student(name: "Eva Noftz", grade: 12))
+        AppData.students.append(Student(name: <#T##String#>, grade: <#T##Int#>, mathCourses: <#T##[String]#>, testScores: <#T##[Int]#>, awards: <#T##[String]#>, compsAttended: <#T##[String]#>))
         AppData.students.append(Student(name: "Nicholas Santoyo", grade: 12))
         AppData.students.append(Student(name: "Ava Schmidt", grade: 12))
         AppData.students.append(Student(name: "Mykaela Wallen", grade: 12))
