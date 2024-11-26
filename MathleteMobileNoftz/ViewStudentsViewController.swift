@@ -48,6 +48,7 @@ class ViewStudentsViewController: UIViewController, UITableViewDelegate, UITable
         AppData.indexSelected = indexPath.row
         print(AppData.indexSelected)
         print(AppData.students[AppData.indexSelected].name)
+        performSegue(withIdentifier: "profileSegue", sender: nil)
     }
     
     

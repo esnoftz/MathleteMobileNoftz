@@ -1430,10 +1430,10 @@
             </objects>
             <point key="canvasLocation" x="2545.801526717557" y="1624.6478873239437"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="zU5-28-eXc">
             <objects>
-                <viewController id="LJr-B4-LfN" sceneMemberID="viewController">
+                <viewController id="LJr-B4-LfN" customClass="ProfileViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gmq-Id-fXH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1471,6 +1471,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4uf-h0-Fkf"/>
+                    <connections>
+                        <outlet property="profileDescriptionTextView" destination="Dsm-LQ-tgL" id="Qf0-fg-goW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4W-NC-ZAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
