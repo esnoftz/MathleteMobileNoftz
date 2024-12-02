@@ -27,7 +27,8 @@ class AddStudentViewController: UIViewController {
             addStudentErrorLabel.text = "Input both the name and grade of the student!"
         } else {
             if let trial = Int(studentGradeInput.text!) {
-                AppData.students.append(Student(name: studentNameInput.text!, grade: Int(studentGradeInput.text!)!))
+                AppData.students.append(Student(name: studentNameInput.text!, grade: Int(studentGradeInput.text!)!, mathCourses: ["N/A"], testScores: [0], awards: ["N/A"], compsAttended: ["N/A"]))
+                //AppData.students.append(Student(name: studentNameInput.text!, grade: Int(studentGradeInput.text!)!))
                 addStudentErrorLabel.text = "Student Added!"
                 studentNameInput.text = ""
                 studentGradeInput.text = ""
