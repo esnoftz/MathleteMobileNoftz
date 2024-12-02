@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         var name = AppData.students[AppData.indexSelected].name
+        var grade = AppData.students[AppData.indexSelected].grade
         var mathCourses = ""
         for i in AppData.students[AppData.indexSelected].mathCourses {
             mathCourses += "\(i), "
@@ -31,8 +32,11 @@ class ProfileViewController: UIViewController {
         for i in AppData.students[AppData.indexSelected].compsAttended {
             compsAttended += "\(i), "
         }
+                
+        profileDescriptionTextView.text = "Name: " + name + "\nGrade: \(grade)" + "\nMath Courses: " + mathCourses + "\nAwards: " + awards + "\nTest Scores: " + testScores + "\nCompetitions Attended: " + compsAttended
         
-        profileDescriptionTextView.text = "Name: " + AppData.students[AppData.indexSelected].name + "\nGrade: " + AppData.students[AppData.indexSelected].grade + "\nMath Courses: " + mathCourses + "\nAwards: " + awards + "\nTest Scores: " + testScores + "\nCompetitions Attended: " + compsAttended
+        
+        /*profileDescriptionTextView.text += "\nMath Courses: " + mathCourses + "\nAwards: " + awards + "\nTest Scores: " + testScores + "\nCompetitions Attended: " + compsAttended*/
         
     }
     
