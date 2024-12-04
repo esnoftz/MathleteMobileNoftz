@@ -20,16 +20,16 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathlete Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-xN-aFL">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="40.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tiger Image" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-6g-MiA">
-                                        <rect key="frame" x="0.0" y="76" width="393" height="299.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="79.333333333333357" width="393" height="199.66666666666663"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkW-cA-8mo">
-                                        <rect key="frame" x="0.0" y="414.66666666666663" width="393" height="57.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="318" width="393" height="57.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="View Students">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-HE-sbp">
-                                        <rect key="frame" x="0.0" y="511.33333333333337" width="393" height="58"/>
+                                        <rect key="frame" x="0.0" y="414.66666666666663" width="393" height="57.666666666666686"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="New Competition">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-vR-XRm">
-                                        <rect key="frame" x="0.0" y="608.33333333333337" width="393" height="57.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="511.33333333333337" width="393" height="58"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Competitions">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
@@ -64,12 +64,26 @@
                                             <segue destination="pmX-fL-qH0" kind="show" identifier="previousCompsSegue" id="xgq-xz-VJa"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9W-O2-4eB">
+                                        <rect key="frame" x="0.0" y="608.33333333333337" width="393" height="57.666666666666629"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Schedule">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="8od-ez-DK3" kind="show" identifier="scheduleSegue" id="uy5-Wi-s5R"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="c9W-O2-4eB" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="7Yu-5u-z4Y"/>
                                     <constraint firstItem="Dho-xN-aFL" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="Cjm-wp-gk0"/>
                                     <constraint firstItem="Sg0-HE-sbp" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="I6A-vo-r2J"/>
+                                    <constraint firstItem="c9W-O2-4eB" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Py2-VH-p15"/>
                                     <constraint firstItem="P2O-vR-XRm" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="TKk-dR-NLO"/>
-                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.45" id="XJq-U2-fnD"/>
+                                    <constraint firstItem="gNQ-6g-MiA" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.3" id="XJq-U2-fnD"/>
                                     <constraint firstItem="RkW-cA-8mo" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Xcy-gC-GKg"/>
                                     <constraint firstItem="P2O-vR-XRm" firstAttribute="height" secondItem="Oqn-9I-bP3" secondAttribute="height" multiplier="0.0867133" id="Z4j-K5-c72"/>
                                     <constraint firstItem="RkW-cA-8mo" firstAttribute="width" secondItem="Oqn-9I-bP3" secondAttribute="width" id="tNJ-aC-JVV"/>
@@ -110,6 +124,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A91-as-Xp0">
+            <objects>
+                <viewController id="8od-ez-DK3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJg-8R-TfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yr2-wo-01v">
+                                <rect key="frame" x="0.0" y="401" width="393" height="368"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="thc-DR-CGB">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thc-DR-CGB" id="DLI-mV-Fjm">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-Zn-306">
+                                <rect key="frame" x="0.0" y="103" width="393" height="223"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-nB-xgM">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-CQ-ieq">
+                                        <rect key="frame" x="0.0" y="73" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add Competition to Schedule">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaM-LY-ti1">
+                                        <rect key="frame" x="0.0" y="136" width="393" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete Scheduled Competition">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I70-MX-4nK">
+                                        <rect key="frame" x="0.0" y="199" width="393" height="24"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JlB-zt-bbY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JlB-zt-bbY" firstAttribute="trailing" secondItem="VM1-Zn-306" secondAttribute="trailing" id="2J5-1y-lMZ"/>
+                            <constraint firstItem="VM1-Zn-306" firstAttribute="top" secondItem="JlB-zt-bbY" secondAttribute="top" id="5t6-Ok-ivG"/>
+                            <constraint firstItem="yr2-wo-01v" firstAttribute="trailing" secondItem="JlB-zt-bbY" secondAttribute="trailing" id="GEs-Lv-6Eq"/>
+                            <constraint firstItem="yr2-wo-01v" firstAttribute="top" secondItem="VM1-Zn-306" secondAttribute="bottom" constant="75" id="Gtn-wC-jYF"/>
+                            <constraint firstItem="yr2-wo-01v" firstAttribute="leading" secondItem="JlB-zt-bbY" secondAttribute="leading" id="dXm-3R-g8u"/>
+                            <constraint firstItem="JlB-zt-bbY" firstAttribute="bottom" secondItem="yr2-wo-01v" secondAttribute="bottom" id="dY0-mM-LLu"/>
+                            <constraint firstItem="VM1-Zn-306" firstAttribute="leading" secondItem="JlB-zt-bbY" secondAttribute="leading" id="taN-Ku-QuJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mpz-ug-Gta"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bje-ie-RpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="-396"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aSE-LK-kKf">
@@ -459,21 +549,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="rvr-DC-LFM">
-                                <rect key="frame" x="0.0" y="203" width="393" height="416"/>
+                                <rect key="frame" x="0.0" y="203" width="393" height="428"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Current Competition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kc-vV-AEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="112.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of competition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2Y-AU-vUh">
-                                        <rect key="frame" x="0.0" y="158.66666666666669" width="393" height="62.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="166" width="393" height="64.333333333333314"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-mM-07q">
-                                        <rect key="frame" x="0.0" y="267.33333333333331" width="393" height="62.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="276.33333333333331" width="393" height="64"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save Competition">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -485,7 +575,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YK-xM-i2B">
-                                        <rect key="frame" x="0.0" y="375.66666666666663" width="393" height="40.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="386.33333333333337" width="393" height="41.666666666666686"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
