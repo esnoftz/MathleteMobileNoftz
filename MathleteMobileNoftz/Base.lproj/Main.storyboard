@@ -196,10 +196,59 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mpz-ug-Gta"/>
+                    <connections>
+                        <segue destination="Ziy-B6-dxX" kind="show" identifier="scheduleProfileSegue" id="qtY-lX-gga"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bje-ie-RpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="-396"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SJc-nZ-aUT">
+            <objects>
+                <viewController id="Ziy-B6-dxX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UwH-0G-efs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-WC-iQB">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM1-ux-hWj">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="199.66666666666666"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="hi" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="utg-pV-voq">
+                                        <rect key="frame" x="0.0" y="199.66666666666671" width="393" height="466.33333333333326"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="utg-pV-voq" firstAttribute="height" secondItem="eMt-WC-iQB" secondAttribute="height" multiplier="0.7" id="1oK-hc-1AU"/>
+                                    <constraint firstItem="iM1-ux-hWj" firstAttribute="height" secondItem="eMt-WC-iQB" secondAttribute="height" multiplier="0.3" id="rkm-7N-sJj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gCv-C6-ZRs"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gCv-C6-ZRs" firstAttribute="bottom" secondItem="eMt-WC-iQB" secondAttribute="bottom" id="F2W-4W-53h"/>
+                            <constraint firstAttribute="trailing" secondItem="eMt-WC-iQB" secondAttribute="trailing" id="FvF-BO-POb"/>
+                            <constraint firstItem="eMt-WC-iQB" firstAttribute="leading" secondItem="gCv-C6-ZRs" secondAttribute="leading" id="QTw-Qm-39m"/>
+                            <constraint firstItem="eMt-WC-iQB" firstAttribute="top" secondItem="gCv-C6-ZRs" secondAttribute="top" id="v9V-bS-4jS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CGK-PZ-yMC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wL-ga-F6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684.7328244274809" y="-768.30985915492965"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aSE-LK-kKf">
