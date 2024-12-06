@@ -43,13 +43,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-HE-sbp">
                                         <rect key="frame" x="0.0" y="414.66666666666663" width="393" height="57.666666666666686"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="New Competition">
+                                        <buttonConfiguration key="configuration" style="filled" title="Create Teams">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="O9y-Ja-1W6" kind="show" identifier="createTeamsSegue" id="gWK-Nv-PUv"/>
+                                            <segue destination="g9T-9P-h5L" kind="show" identifier="createTeamsPickCompSegue" id="ds6-us-YVQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-vR-XRm">
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--New Competition View Controller-->
         <scene sceneID="Wce-Bc-qYa">
             <objects>
-                <viewController id="cIR-us-LXZ" sceneMemberID="viewController">
+                <viewController id="cIR-us-LXZ" customClass="NewCompetitionViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i4v-cg-Glq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="1015" y="-827"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="A91-as-Xp0">
             <objects>
-                <viewController id="8od-ez-DK3" sceneMemberID="viewController">
+                <viewController id="8od-ez-DK3" customClass="ScheduleViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJg-8R-TfZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="1854" y="-396"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedule Profile View Controller-->
         <scene sceneID="SJc-nZ-aUT">
             <objects>
-                <viewController id="Ziy-B6-dxX" sceneMemberID="viewController">
+                <viewController id="Ziy-B6-dxX" customClass="ScheduleProfileViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UwH-0G-efs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,14 +651,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKE-4S-0l0">
                                         <rect key="frame" x="0.0" y="616" width="393" height="50"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save Current Competition">
+                                        <buttonConfiguration key="configuration" style="filled" title="Save Teams">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="g9T-9P-h5L" kind="show" identifier="saveCompetitionSegue" id="3YN-qJ-B9P"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -715,13 +712,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-mM-07q">
                                         <rect key="frame" x="0.0" y="276.33333333333331" width="393" height="64"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save Competition">
+                                        <buttonConfiguration key="configuration" style="filled" title="Choose Competition">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="saveCompetitionAction:" destination="g9T-9P-h5L" eventType="touchUpInside" id="v45-nY-Fzf"/>
+                                            <segue destination="O9y-Ja-1W6" kind="show" identifier="createTeamsTeamSegue" id="vKc-vW-xkB"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YK-xM-i2B">
