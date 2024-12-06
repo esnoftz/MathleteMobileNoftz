@@ -23,6 +23,7 @@ class SaveCompetitionViewController: UIViewController {
     
     @IBAction func saveCompetitionAction(_ sender: UIButton) {
         
+        // put this code into action for save current competition button (swap order of vcs)
         if competitionNameTextField.text != "" {
             AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: competitionNameTextField.text!))
             AppData.froshSophTeam = [Student]()
