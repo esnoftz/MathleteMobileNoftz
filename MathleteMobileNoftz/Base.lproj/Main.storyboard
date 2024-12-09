@@ -181,6 +181,9 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addToScheduleAction:" destination="cIR-us-LXZ" eventType="touchUpInside" id="UsY-lO-rG0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -204,6 +207,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="65Q-CH-npJ"/>
+                    <connections>
+                        <outlet property="compDateOutlet" destination="1qa-Zk-5bU" id="GOe-sG-DFN"/>
+                        <outlet property="compLocationOutlet" destination="DEl-Qe-l97" id="4oR-sq-pfD"/>
+                        <outlet property="compNameOutlet" destination="maD-MM-DJo" id="0er-nd-VXs"/>
+                        <outlet property="compStartTimeOutlet" destination="KRg-KV-RXR" id="hQW-Pm-kkK"/>
+                        <outlet property="compTeamsOutlet" destination="Q6g-5t-OMf" id="kw1-39-eQi"/>
+                        <outlet property="newCompErrorLabel" destination="139-ac-RRf" id="YuG-wU-J13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndJ-Wh-uMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,7 +232,7 @@
                                 <rect key="frame" x="0.0" y="427" width="393" height="342"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell8" id="thc-DR-CGB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell8" id="thc-DR-CGB" customClass="ScheduleCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="46.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="thc-DR-CGB" id="DLI-mV-Fjm">
@@ -242,6 +253,9 @@
                                                 <constraint firstItem="cPk-UD-hxV" firstAttribute="top" secondItem="DLI-mV-Fjm" secondAttribute="top" constant="11" id="uDr-bz-QJB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="scheduleLabelOutlet" destination="cPk-UD-hxV" id="YQQ-wh-BtH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -298,6 +312,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mpz-ug-Gta"/>
                     <connections>
+                        <outlet property="scheduleErrorLabel" destination="I70-MX-4nK" id="2KG-XR-Fo4"/>
+                        <outlet property="scheduleTableView" destination="yr2-wo-01v" id="BpG-n5-rxp"/>
                         <segue destination="Ziy-B6-dxX" kind="show" identifier="scheduleProfileSegue" id="qtY-lX-gga"/>
                     </connections>
                 </viewController>

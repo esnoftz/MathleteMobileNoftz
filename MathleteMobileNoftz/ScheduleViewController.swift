@@ -7,13 +7,52 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var scheduleTableView: UITableView!
+    
+    @IBOutlet weak var scheduleErrorLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        scheduleTableView.delegate = self
+        scheduleTableView.dataSource = self
+        
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        AppData.schedule.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell8 = tableView.dequeueReusableCell(withIdentifier: "myCell8") as! ScheduleCell
+
+        cell8.scheduleLabelOutlet.text = AppData.schedule[indexPath.row].compName
+        
+        return cell8
+
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     /*
