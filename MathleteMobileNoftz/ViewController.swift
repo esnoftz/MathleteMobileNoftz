@@ -23,6 +23,7 @@ class AppData {
     static var oralCompTeam = [Student]()
     static var calculatorTeam = [Student]()
     static var competitions = [Competition]()
+    static var schedule = [ScheduleInfo]()
 }
 
 class ViewController: UIViewController {
