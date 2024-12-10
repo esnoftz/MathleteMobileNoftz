@@ -11,6 +11,8 @@ class ScheduleProfileViewController: UIViewController {
     
     
 
+    @IBOutlet weak var scheduleTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
