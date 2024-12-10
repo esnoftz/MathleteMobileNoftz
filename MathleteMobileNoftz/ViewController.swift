@@ -129,6 +129,21 @@ class ViewController: UIViewController {
             
         }
         
+        if let allSchedule = AppData.defaults.data(forKey: "scheduleList") {
+
+            // decoding the data stored in blahDogs into objects in a Dog array
+            if let inSchedule = try? AppData.decoder.decode([ScheduleInfo].self, from: allSchedule) {
+                AppData.schedule = inSchedule
+                
+                for s in AppData.schedule {
+                    print(s.compName)
+                }
+                
+            }
+            
+        }
+
+        
     }
     
     
@@ -137,9 +152,14 @@ class ViewController: UIViewController {
             AppData.defaults.set(studentsTest, forKey: "studentsList")
         }
         
-        if let competitionsText = try? AppData.encoder.encode(AppData.competitions) {    // safe unwrap!
-            AppData.defaults.set(competitionsText, forKey: "competitionsList")
+        if let competitionsTest = try? AppData.encoder.encode(AppData.competitions) {    // safe unwrap!
+            AppData.defaults.set(competitionsTest, forKey: "competitionsList")
         }
+        
+        if let scheduleTest = try? AppData.encoder.encode(AppData.schedule) {    // safe unwrap!
+            AppData.defaults.set(scheduleTest, forKey: "scheduleList")
+        }
+
     }
     
 

@@ -51,6 +51,9 @@ class NewCompetitionViewController: UIViewController {
             newCompErrorLabel.text = "Competition added to schedule!"
         }
         
+        
+        
+        
     }
     
     
