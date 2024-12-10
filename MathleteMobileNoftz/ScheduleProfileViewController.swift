@@ -9,8 +9,6 @@ import UIKit
 
 class ScheduleProfileViewController: UIViewController {
     
-    
-
     @IBOutlet weak var scheduleTextView: UITextView!
     
     override func viewDidLoad() {
@@ -21,6 +19,8 @@ class ScheduleProfileViewController: UIViewController {
         var compTime = AppData.schedule[AppData.indexSelected].time
         var compLoc = AppData.schedule[AppData.indexSelected].loc
         var compTeams = AppData.schedule[AppData.indexSelected].teams
+        
+        scheduleTextView.text = "Name: " + compName + "\nDate: " + compDate + "\nTime: " + compTime + "\nLocation: " + compLoc + "\nTeams: " + compTeams
         
         
     }
