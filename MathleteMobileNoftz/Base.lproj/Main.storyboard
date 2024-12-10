@@ -675,6 +675,9 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveTeamsAction:" destination="O9y-Ja-1W6" eventType="touchUpInside" id="bZ3-av-8KD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

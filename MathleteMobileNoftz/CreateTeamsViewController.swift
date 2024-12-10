@@ -16,6 +16,19 @@ class CreateTeamsViewController: UIViewController {
     }
     
     
+    @IBAction func saveTeamsAction(_ sender: UIButton) {
+        
+        print(AppData.indexSelected)
+        
+        AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.indexSelected].compName))
+            AppData.froshSophTeam = [Student]()
+            AppData.jrSrTeam = [Student]()
+            AppData.twoPersonTeam = [Student]()
+            AppData.oralCompTeam = [Student]()
+            AppData.calculatorTeam = [Student]()
+            //saveCompetitionErrorLabel.text = "Competition saved!"
+
+    }
     
     
     
