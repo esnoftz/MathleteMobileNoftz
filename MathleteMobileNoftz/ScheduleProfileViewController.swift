@@ -8,11 +8,19 @@
 import UIKit
 
 class ScheduleProfileViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        var compName = AppData.schedule[AppData.indexSelected].compName
+        var compDate = AppData.schedule[AppData.indexSelected].date
+        var compTime = AppData.schedule[AppData.indexSelected].time
+        var compLoc = AppData.schedule[AppData.indexSelected].loc
+        var compTeams = AppData.schedule[AppData.indexSelected].teams
+        
+        
     }
     
 

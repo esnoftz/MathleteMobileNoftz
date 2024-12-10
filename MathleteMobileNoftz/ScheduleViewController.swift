@@ -26,13 +26,14 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         scheduleTableView.reloadData()
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "scheduleProfileSegue", sender: nil)
-        
-        
+        AppData.indexSelected = indexPath.row
         
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         AppData.schedule.count
