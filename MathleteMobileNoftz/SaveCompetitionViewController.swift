@@ -7,56 +7,56 @@
 
 import UIKit
 
-class SaveCompetitionViewController: UIViewController {
+class SaveCompetitionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    @IBOutlet weak var picker: UIPickerView!
 
     @IBOutlet weak var saveCompetitionErrorLabel: UILabel!
     
-    @IBOutlet weak var competitionNameTextField: UITextField!
-    
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        picker.delegate = self
+        picker.dataSource
+        
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return AppData.schedule.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return AppData.schedule[row].compName
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        AppData.indexSelected = row
+        //print(row)
+        
+    }
+
     
     @IBAction func saveCompetitionAction(_ sender: UIButton) {
         
         // put this code into action for save current competition button (swap order of vcs)
-        if competitionNameTextField.text != "" {
-            AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: competitionNameTextField.text!))
+        
+        AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.indexSelected].compName))
             AppData.froshSophTeam = [Student]()
             AppData.jrSrTeam = [Student]()
             AppData.twoPersonTeam = [Student]()
             AppData.oralCompTeam = [Student]()
             AppData.calculatorTeam = [Student]()
             saveCompetitionErrorLabel.text = "Competition saved!"
-        } else {
-            saveCompetitionErrorLabel.text = "Enter the competition name!"
-        }
-        competitionNameTextField.text = ""
+       
         
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
