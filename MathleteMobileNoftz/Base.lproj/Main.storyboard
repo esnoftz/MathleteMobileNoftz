@@ -731,15 +731,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-qy-lCT">
-                                        <rect key="frame" x="0.0" y="191" width="393" height="216"/>
+                                        <rect key="frame" x="0.0" y="260" width="393" height="216"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                     </pickerView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of competition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2Y-AU-vUh">
-                                        <rect key="frame" x="0.0" y="478.33333333333337" width="393" height="66.666666666666629"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-mM-07q">
                                         <rect key="frame" x="0.0" y="616" width="393" height="50"/>
                                         <state key="normal" title="Button"/>
@@ -756,7 +751,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="5kc-vV-AEe" firstAttribute="height" secondItem="tUE-4w-CKs" secondAttribute="height" multiplier="0.18018" id="6Fv-w4-rOF"/>
-                                    <constraint firstItem="M2Y-AU-vUh" firstAttribute="height" secondItem="tUE-4w-CKs" secondAttribute="height" multiplier="0.1" id="Cyl-QG-9ss"/>
                                     <constraint firstItem="6VL-qy-lCT" firstAttribute="height" secondItem="tUE-4w-CKs" secondAttribute="height" multiplier="0.324324" id="pOv-ti-UqL"/>
                                 </constraints>
                             </stackView>
@@ -772,7 +766,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="N8g-9M-r7c"/>
                     <connections>
-                        <outlet property="competitionNameTextField" destination="M2Y-AU-vUh" id="GjT-oH-Yyg"/>
+                        <outlet property="picker" destination="6VL-qy-lCT" id="pf4-nY-phr"/>
                         <outlet property="saveCompetitionErrorLabel" destination="7YK-xM-i2B" id="cOR-xX-PJb"/>
                     </connections>
                 </viewController>
