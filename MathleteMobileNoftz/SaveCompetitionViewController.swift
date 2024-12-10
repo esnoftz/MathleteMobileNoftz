@@ -19,7 +19,7 @@ class SaveCompetitionViewController: UIViewController, UIPickerViewDelegate, UIP
         super.viewDidLoad()
 
         picker.delegate = self
-        picker.dataSource
+        picker.dataSource = self
         
     }
     
@@ -41,18 +41,22 @@ class SaveCompetitionViewController: UIViewController, UIPickerViewDelegate, UIP
         
     }
 
-    
+    //TEST THIS LATER
     @IBAction func saveCompetitionAction(_ sender: UIButton) {
+        
+        if AppData.indexSelected == -1 {
+            AppData.indexSelected = 0
+        }
         
         // put this code into action for save current competition button (swap order of vcs)
         
-        AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.indexSelected].compName))
+        /*AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.indexSelected].compName))
             AppData.froshSophTeam = [Student]()
             AppData.jrSrTeam = [Student]()
             AppData.twoPersonTeam = [Student]()
             AppData.oralCompTeam = [Student]()
             AppData.calculatorTeam = [Student]()
-            saveCompetitionErrorLabel.text = "Competition saved!"
+            saveCompetitionErrorLabel.text = "Competition saved!"*/
        
         
     }
