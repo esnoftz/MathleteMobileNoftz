@@ -36,17 +36,18 @@ class SaveCompetitionViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        AppData.indexSelected = row
-        //print(row)
+        
+        AppData.scheduleIndex = row
+        print(row)
         
     }
 
     //TEST THIS LATER
     @IBAction func saveCompetitionAction(_ sender: UIButton) {
         
-        if AppData.indexSelected == -1 {
+        /*if AppData.indexSelected == -1 {
             AppData.indexSelected = 0
-        }
+        }*/
         
         // put this code into action for save current competition button (swap order of vcs)
         

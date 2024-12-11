@@ -12,21 +12,33 @@ class CreateTeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if AppData.scheduleIndex == -1 {
+            AppData.scheduleIndex = 0
+        }
 
     }
     
     
     @IBAction func saveTeamsAction(_ sender: UIButton) {
         
-        print(AppData.indexSelected)
+        if AppData.scheduleIndex == -1 {
+            AppData.scheduleIndex = 0
+        }
         
-        AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.indexSelected].compName))
+        print(AppData.scheduleIndex)
+        
+        AppData.competitions.append(Competition(froshSophTeam: AppData.froshSophTeam, jrSrTeam: AppData.jrSrTeam, twoPersonTeam: AppData.twoPersonTeam, oralCompTeam: AppData.oralCompTeam, calculatorTeam: AppData.calculatorTeam, competitionName: AppData.schedule[AppData.scheduleIndex].compName))
+        print("Competitions \(AppData.competitions.count)")
             AppData.froshSophTeam = [Student]()
             AppData.jrSrTeam = [Student]()
             AppData.twoPersonTeam = [Student]()
             AppData.oralCompTeam = [Student]()
             AppData.calculatorTeam = [Student]()
             //saveCompetitionErrorLabel.text = "Competition saved!"
+        
+        //performSegue(withIdentifier: "backToHomeSegue", sender: nil)
+        self.navigationController?.popViewController(animated: true)
 
     }
     
