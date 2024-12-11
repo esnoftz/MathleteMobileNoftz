@@ -20,6 +20,10 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
         competitionsTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+       // competitionsTableView.reloadData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         AppData.indexSelected = -1
     }
@@ -35,7 +39,10 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        AppData.competitions.count
+        //AppData.competitions.count
+        print("Schedule count \(AppData.schedule.count)")
+        print("Competition count \(AppData.competitions.count)")
+        return AppData.competitions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

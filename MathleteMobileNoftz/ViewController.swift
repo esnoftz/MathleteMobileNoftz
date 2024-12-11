@@ -24,6 +24,7 @@ class AppData {
     static var calculatorTeam = [Student]()
     static var competitions = [Competition]()
     static var schedule = [ScheduleInfo]()
+    static var scheduleIndex = -1
 }
 
 class ViewController: UIViewController {
