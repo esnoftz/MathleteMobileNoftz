@@ -837,65 +837,113 @@
                                     <constraint firstItem="l5f-ZY-sit" firstAttribute="width" secondItem="Kkq-sW-Lht" secondAttribute="width" id="zJy-u2-DJX"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-in-Uer">
-                                <rect key="frame" x="0.0" y="409" width="393" height="402"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="L8c-HQ-chx" customClass="FroshSophCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="24.333333969116211"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L8c-HQ-chx" id="nVs-tg-LFj">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="24.333333969116211"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="no6-Bo-IJ2">
-                                                    <rect key="frame" x="10" y="0.0" width="373" height="24.333333333333332"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rZa-rO-ui6">
+                                <rect key="frame" x="0.0" y="393" width="393" height="459"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-in-Uer">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="459"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="L8c-HQ-chx" customClass="FroshSophCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="196.66666666666666" height="24.333333969116211"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L8c-HQ-chx" id="nVs-tg-LFj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="24.333333969116211"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZi-cf-YE3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="155" height="24.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODf-y5-zxK">
-                                                            <rect key="frame" x="218" y="0.0" width="155" height="24.333333333333332"/>
-                                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="no6-Bo-IJ2">
+                                                            <rect key="frame" x="10" y="0.0" width="176.66666666666666" height="24.333333333333332"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZi-cf-YE3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="24.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODf-y5-zxK">
+                                                                    <rect key="frame" x="103.33333333333334" y="0.0" width="73.333333333333343" height="24.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="HZi-cf-YE3" firstAttribute="width" secondItem="no6-Bo-IJ2" secondAttribute="width" multiplier="0.41555" id="BPO-dh-0NJ"/>
+                                                                <constraint firstItem="ODf-y5-zxK" firstAttribute="width" secondItem="no6-Bo-IJ2" secondAttribute="width" multiplier="0.41555" id="GzQ-Gl-87A"/>
+                                                            </constraints>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="HZi-cf-YE3" firstAttribute="width" secondItem="no6-Bo-IJ2" secondAttribute="width" multiplier="0.41555" id="BPO-dh-0NJ"/>
-                                                        <constraint firstItem="ODf-y5-zxK" firstAttribute="width" secondItem="no6-Bo-IJ2" secondAttribute="width" multiplier="0.41555" id="GzQ-Gl-87A"/>
+                                                        <constraint firstItem="no6-Bo-IJ2" firstAttribute="top" secondItem="nVs-tg-LFj" secondAttribute="top" id="8Z0-Zc-Mma"/>
+                                                        <constraint firstAttribute="trailing" secondItem="no6-Bo-IJ2" secondAttribute="trailing" constant="10" id="AIw-YY-8KW"/>
+                                                        <constraint firstItem="no6-Bo-IJ2" firstAttribute="leading" secondItem="nVs-tg-LFj" secondAttribute="leading" constant="10" id="KcO-z5-q9V"/>
+                                                        <constraint firstAttribute="bottom" secondItem="no6-Bo-IJ2" secondAttribute="bottom" id="dUk-P1-ALz"/>
                                                     </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="no6-Bo-IJ2" firstAttribute="top" secondItem="nVs-tg-LFj" secondAttribute="top" id="8Z0-Zc-Mma"/>
-                                                <constraint firstAttribute="trailing" secondItem="no6-Bo-IJ2" secondAttribute="trailing" constant="10" id="AIw-YY-8KW"/>
-                                                <constraint firstItem="no6-Bo-IJ2" firstAttribute="leading" secondItem="nVs-tg-LFj" secondAttribute="leading" constant="10" id="KcO-z5-q9V"/>
-                                                <constraint firstAttribute="bottom" secondItem="no6-Bo-IJ2" secondAttribute="bottom" id="dUk-P1-ALz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="gradeLabel" destination="ODf-y5-zxK" id="fCp-yc-d7w"/>
-                                            <outlet property="nameLabel" destination="HZi-cf-YE3" id="jM8-l9-d79"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="gradeLabel" destination="ODf-y5-zxK" id="fCp-yc-d7w"/>
+                                                    <outlet property="nameLabel" destination="HZi-cf-YE3" id="jM8-l9-d79"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-oV-GhZ">
+                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="459"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell9" id="hmx-F3-Ptv" customClass="FSAddedCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="196.33333333333337" height="24.333333969116211"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmx-F3-Ptv" id="As4-Lo-SGd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="196.33333333333337" height="24.333333969116211"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kYQ-yf-fSd">
+                                                            <rect key="frame" x="10" y="0.0" width="176.33333333333334" height="24.333333333333332"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCQ-Qg-8Wf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="24.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZT-27-tFw">
+                                                                    <rect key="frame" x="88.333333333333314" y="0.0" width="88" height="24.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="kYQ-yf-fSd" firstAttribute="top" secondItem="As4-Lo-SGd" secondAttribute="top" id="5EG-QA-6b6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kYQ-yf-fSd" secondAttribute="trailing" constant="10" id="Aus-9o-3bs"/>
+                                                        <constraint firstItem="kYQ-yf-fSd" firstAttribute="leading" secondItem="As4-Lo-SGd" secondAttribute="leading" constant="10" id="e2S-JR-Ozc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kYQ-yf-fSd" secondAttribute="bottom" id="tiL-aK-jDP"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="gradeLabel2" destination="tZT-27-tFw" id="GgX-w9-FnA"/>
+                                                    <outlet property="nameLabel2" destination="iCQ-Qg-8Wf" id="el2-Up-Ksg"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SJg-FX-45e"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pv5-in-Uer" firstAttribute="leading" secondItem="SJg-FX-45e" secondAttribute="leading" id="3US-YL-Mkc"/>
-                            <constraint firstAttribute="bottom" secondItem="Pv5-in-Uer" secondAttribute="bottom" constant="41" id="CGf-PA-7Tj"/>
-                            <constraint firstItem="Pv5-in-Uer" firstAttribute="top" secondItem="Kkq-sW-Lht" secondAttribute="bottom" constant="40" id="GeN-m0-uG7"/>
+                            <constraint firstItem="rZa-rO-ui6" firstAttribute="leading" secondItem="SJg-FX-45e" secondAttribute="leading" id="5fK-Cj-tdN"/>
                             <constraint firstAttribute="trailing" secondItem="Kkq-sW-Lht" secondAttribute="trailing" id="Rzp-xm-oMu"/>
+                            <constraint firstItem="rZa-rO-ui6" firstAttribute="top" secondItem="Kkq-sW-Lht" secondAttribute="bottom" constant="24" id="Shd-i9-lSR"/>
+                            <constraint firstAttribute="trailing" secondItem="rZa-rO-ui6" secondAttribute="trailing" id="Xii-du-ZCZ"/>
                             <constraint firstItem="SJg-FX-45e" firstAttribute="bottom" secondItem="Kkq-sW-Lht" secondAttribute="bottom" constant="400" id="dWW-lT-kIM"/>
                             <constraint firstItem="Kkq-sW-Lht" firstAttribute="leading" secondItem="SJg-FX-45e" secondAttribute="leading" id="jdM-6V-51k"/>
                             <constraint firstItem="Kkq-sW-Lht" firstAttribute="top" secondItem="SJg-FX-45e" secondAttribute="top" id="oPv-Rw-lvL"/>
-                            <constraint firstItem="Pv5-in-Uer" firstAttribute="trailing" secondItem="SJg-FX-45e" secondAttribute="trailing" id="zg5-OR-tCz"/>
+                            <constraint firstAttribute="bottom" secondItem="rZa-rO-ui6" secondAttribute="bottom" id="zYD-Jr-Lpc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ldc-OV-6cX"/>
