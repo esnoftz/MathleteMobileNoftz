@@ -24,6 +24,8 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
         
         FSAddedTableView.delegate = self
         FSAddedTableView.dataSource = self
+        
+        var availableFSStudents = AppData.students
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,7 +46,7 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
             } else {
                 froshSophErrorLabel.text = "Select a student!"
             }
-            AppData.students.remove(at: AppData.selectedIndexes[i])
+            //AppData.students.remove(at: AppData.selectedIndexes[i])
         }
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
