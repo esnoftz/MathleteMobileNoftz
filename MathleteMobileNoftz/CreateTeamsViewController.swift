@@ -19,9 +19,7 @@ class CreateTeamsViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        <#code#>
-    }
+    
     
     @IBAction func saveTeamsAction(_ sender: UIButton) {
         
