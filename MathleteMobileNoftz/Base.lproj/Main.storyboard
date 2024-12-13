@@ -840,7 +840,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rZa-rO-ui6">
                                 <rect key="frame" x="0.0" y="393" width="393" height="459"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-in-Uer">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-in-Uer">
                                         <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="459"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
@@ -948,6 +948,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ldc-OV-6cX"/>
                     <connections>
+                        <outlet property="FSAddedTableView" destination="SPw-oV-GhZ" id="YlP-1g-wX0"/>
                         <outlet property="froshSophErrorLabel" destination="E8R-cI-eQy" id="jMT-8G-Iln"/>
                         <outlet property="froshSophTableView" destination="Pv5-in-Uer" id="MGh-92-Tl4"/>
                     </connections>
