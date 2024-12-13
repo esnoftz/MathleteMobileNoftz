@@ -229,7 +229,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yr2-wo-01v">
-                                <rect key="frame" x="0.0" y="427" width="393" height="342"/>
+                                <rect key="frame" x="0.0" y="364" width="393" height="405"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell8" id="thc-DR-CGB" customClass="ScheduleCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
@@ -260,7 +260,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="VM1-Zn-306">
-                                <rect key="frame" x="0.0" y="103" width="393" height="249"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="186"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-nB-xgM">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -280,17 +280,8 @@
                                             <segue destination="cIR-us-LXZ" kind="show" identifier="addCompSegue" id="nMW-HM-zMu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaM-LY-ti1">
-                                        <rect key="frame" x="0.0" y="136" width="393" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Delete Scheduled Competition">
-                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I70-MX-4nK">
-                                        <rect key="frame" x="0.0" y="199" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="136" width="393" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
@@ -473,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-6S-gT6">
-                                <rect key="frame" x="0.0" y="415" width="393" height="414"/>
+                                <rect key="frame" x="0.0" y="339" width="393" height="490"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="6LU-7L-XVy" customClass="CrazyCell" customModule="MathleteMobileNoftz" customModuleProvider="target">
@@ -520,7 +511,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-jm-Dsh">
-                                <rect key="frame" x="0.0" y="103" width="393" height="282"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtt-T3-mEp">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -540,20 +531,8 @@
                                             <segue destination="Z3w-4K-zMw" kind="show" identifier="addStudentSegue" id="UJj-S8-paK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-hO-dAE">
-                                        <rect key="frame" x="0.0" y="156" width="393" height="56"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Delete Selected Student">
-                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="35"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="deleteStudentAction:" destination="2xe-WL-IzL" eventType="touchUpInside" id="2da-mc-fCw"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-ks-1Op">
-                                        <rect key="frame" x="0.0" y="232" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="156" width="393" height="50"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
@@ -561,7 +540,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Dtt-T3-mEp" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="J4C-Co-8M3"/>
-                                    <constraint firstItem="P5W-hO-dAE" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="LA1-IO-93W"/>
                                     <constraint firstItem="boD-wO-Tqh" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="oQV-BC-O1X"/>
                                     <constraint firstItem="DP2-ks-1Op" firstAttribute="width" secondItem="cMO-jm-Dsh" secondAttribute="width" id="wqm-bE-cPq"/>
                                 </constraints>

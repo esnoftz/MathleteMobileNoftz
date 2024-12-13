@@ -12,16 +12,16 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var competitionsTableView: UITableView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         competitionsTableView.delegate = self
         competitionsTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       // competitionsTableView.reloadData()
+        // competitionsTableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,21 +48,37 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell7 = tableView.dequeueReusableCell(withIdentifier: "myCell7") as! CompetitionCell
-
+        
         cell7.competitionLabel.text = AppData.competitions[indexPath.row].competitionName
         
         return cell7
-
+        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            AppData.competitions.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            
+        }
+        
+        
+        
+        
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
     }
-    */
-
 }
