@@ -57,7 +57,7 @@ class CompetitionsViewController: UIViewController, UITableViewDelegate, UITable
     
     
     
-    
+    /* Source: https://www.hackingwithswift.com/example-code/uikit/how-to-swipe-to-delete-uitableviewcells*/
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             AppData.competitions.remove(at: indexPath.row)
