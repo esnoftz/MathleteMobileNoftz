@@ -15,7 +15,8 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var FSAddedTableView: UITableView!
     
-    
+    var availableFSStudents = AppData.students
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +26,6 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
         FSAddedTableView.delegate = self
         FSAddedTableView.dataSource = self
         
-        var availableFSStudents = AppData.students
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,11 +46,28 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
             } else {
                 froshSophErrorLabel.text = "Select a student!"
             }
-            //AppData.students.remove(at: AppData.selectedIndexes[i])
+            //availableFSStudents.remove(at: AppData.selectedIndexes[i])
         }
+        
+        print("selected indexes \(AppData.selectedIndexes.count)")
+        print("availabe students \(availableFSStudents.count)")
+        
+        var numIndexes = AppData.selectedIndexes.count - 1
+        while numIndexes >= 0 {
+            availableFSStudents.remove(at: AppData.selectedIndexes[numIndexes])
+            numIndexes = numIndexes - 1
+        }
+        
+        /*for i in AppData.selectedIndexes.count...1 {
+            //print("selected indexes \(AppData.selectedIndexes.count)")
+            //print("availabe students \(availableFSStudents.count)")
+            availableFSStudents.remove(at: AppData.selectedIndexes[i])
+        }*/
+        
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
         FSAddedTableView.reloadData()
+        froshSophTableView.reloadData()
     }
     
     @IBAction func froshSophViewTeamAction(_ sender: UIButton) {
@@ -60,7 +77,7 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == froshSophTableView {
-            return AppData.students.count
+            return availableFSStudents.count
         } else {
             return AppData.froshSophTeam.count
         }
@@ -73,8 +90,12 @@ class FroshSophViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "myCell2") as! FroshSophCell
             
-            cell2.nameLabel.text = AppData.students[indexPath.row].name
-            cell2.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            cell2.nameLabel.text = availableFSStudents[indexPath.row].name
+            cell2.gradeLabel.text = "\(availableFSStudents[indexPath.row].grade)"
+
+            
+            /*cell2.nameLabel.text = AppData.students[indexPath.row].name
+            cell2.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"*/
             
             return cell2
             
