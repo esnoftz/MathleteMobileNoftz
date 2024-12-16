@@ -14,11 +14,17 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var jrSrErrorLabel: UILabel!
     
+    @IBOutlet weak var JSAddedTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         jrSrTableView.delegate = self
         jrSrTableView.dataSource = self
+        
+        JSAddedTableView.delegate = self
+        JSAddedTableView.dataSource = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,17 +33,36 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.indexSelected = indexPath.row
+        AppData.selectedIndexes.append(indexPath.row)
         jrSrErrorLabel.text = ""
     }
     
     @IBAction func addToJrSrAction(_ sender: UIButton) {
-        if AppData.indexSelected != -1 {
+        /*if AppData.indexSelected != -1 {
             AppData.jrSrTeam.append(AppData.students[AppData.indexSelected])
             jrSrErrorLabel.text = "Student added to team!"
         } else {
             jrSrErrorLabel.text = "Select a student!"
         }
+        AppData.indexSelected = -1*/
+        
+        
+        
+        
+        
+        for i in 0...AppData.selectedIndexes.count - 1 {
+            if AppData.selectedIndexes[i] != -1 {
+                AppData.jrSrTeam.append(AppData.students[AppData.selectedIndexes[i]])
+                jrSrErrorLabel.text = "Student added to team!"
+            } else {
+                jrSrErrorLabel.text = "Select a student!"
+            }
+            //AppData.students.remove(at: AppData.selectedIndexes[i])
+        }
         AppData.indexSelected = -1
+        AppData.selectedIndexes = [Int]()
+        JSAddedTableView.reloadData()
+
     }
     
     @IBAction func jrSrViewTeamAction(_ sender: UIButton) {
@@ -50,19 +75,56 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.students.count
+        //return AppData.students.count
+        
+        
+        if tableView == jrSrTableView {
+            return AppData.students.count
+        } else {
+            return AppData.jrSrTeam.count
+        }
+
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell3 = tableView.dequeueReusableCell(withIdentifier: "myCell3") as! JrSrCell
+        /*let cell3 = tableView.dequeueReusableCell(withIdentifier: "myCell3") as! JrSrCell
 
         cell3.nameLabel.text = AppData.students[indexPath.row].name
         cell3.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
         
-        return cell3
+        return cell3*/
 
+        
+        
+        
+        
+        
+        
+        
+        if tableView == jrSrTableView {
+            
+            let cell3 = tableView.dequeueReusableCell(withIdentifier: "myCell3") as! JrSrCell
+            
+            cell3.nameLabel.text = AppData.students[indexPath.row].name
+            cell3.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            
+            return cell3
+            
+        } else {
+            
+            let cell10 = tableView.dequeueReusableCell(withIdentifier: "myCell10") as! JSAddedCell
+            
+            cell10.nameLabel2.text = AppData.jrSrTeam[indexPath.row].name
+            cell10.gradeLabel2.text = "\(AppData.jrSrTeam[indexPath.row].grade)"
+            
+            return cell10
+
+        }
+        
+        
+        
     }
     
     

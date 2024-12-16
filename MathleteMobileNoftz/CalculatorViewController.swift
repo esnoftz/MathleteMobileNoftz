@@ -14,11 +14,17 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var calculatorErrorLabel: UILabel!
     
+    @IBOutlet weak var calcAddedTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         calculatorTableView.delegate = self
         calculatorTableView.dataSource = self
+        
+        calcAddedTableView.delegate = self
+        calcAddedTableView.dataSource = self
         
     }
     
@@ -28,17 +34,35 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.indexSelected = indexPath.row
+        AppData.selectedIndexes.append(indexPath.row)
         calculatorErrorLabel.text = ""
     }
     
     @IBAction func addToCalculatorAction(_ sender: UIButton) {
-        if AppData.indexSelected != -1 {
+        /*if AppData.indexSelected != -1 {
             AppData.calculatorTeam.append(AppData.students[AppData.indexSelected])
             calculatorErrorLabel.text = "Student added to team!"
         } else {
             calculatorErrorLabel.text = "Select a student!"
         }
+        AppData.indexSelected = -1*/
+        
+        
+        
+        for i in 0...AppData.selectedIndexes.count - 1 {
+            if AppData.selectedIndexes[i] != -1 {
+                AppData.calculatorTeam.append(AppData.students[AppData.selectedIndexes[i]])
+                calculatorErrorLabel.text = "Student added to team!"
+            } else {
+                calculatorErrorLabel.text = "Select a student!"
+            }
+            //AppData.students.remove(at: AppData.selectedIndexes[i])
+        }
         AppData.indexSelected = -1
+        AppData.selectedIndexes = [Int]()
+        calcAddedTableView.reloadData()
+
+        
     }
     
     @IBAction func calculatorViewTeamAction(_ sender: UIButton) {
@@ -52,18 +76,48 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.students.count
+        //return AppData.students.count
+        
+        if tableView == calculatorTableView {
+            return AppData.students.count
+        } else {
+            return AppData.calculatorTeam.count
+        }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell6 = tableView.dequeueReusableCell(withIdentifier: "myCell6") as! CalculatorCell
+        /*let cell6 = tableView.dequeueReusableCell(withIdentifier: "myCell6") as! CalculatorCell
 
         cell6.nameLabel.text = AppData.students[indexPath.row].name
         cell6.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
         
-        return cell6
+        return cell6*/
+        
+        
+        
+        
+        
+        if tableView == calculatorTableView {
+            
+            let cell6 = tableView.dequeueReusableCell(withIdentifier: "myCell6") as! CalculatorCell
+            
+            cell6.nameLabel.text = AppData.students[indexPath.row].name
+            cell6.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            
+            return cell6
+            
+        } else {
+            
+            let cell13 = tableView.dequeueReusableCell(withIdentifier: "myCell13") as! CalcAddedCell
+            
+            cell13.nameLabel2.text = AppData.calculatorTeam[indexPath.row].name
+            cell13.gradeLabel2.text = "\(AppData.calculatorTeam[indexPath.row].grade)"
+            
+            return cell13
+
+        }
 
     }
     
