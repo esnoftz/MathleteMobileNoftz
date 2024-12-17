@@ -16,6 +16,8 @@ class TwoPersonViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var TPAddedTableView: UITableView!
     
+    var availableTwoStudents = AppData.students
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +60,17 @@ class TwoPersonViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             //AppData.students.remove(at: AppData.selectedIndexes[i])
         }
+        
+        var numIndexes = AppData.selectedIndexes.count - 1
+        while numIndexes >= 0 {
+            availableTwoStudents.remove(at: AppData.selectedIndexes[numIndexes])
+            numIndexes = numIndexes - 1
+        }
+        
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
         TPAddedTableView.reloadData()
+        twoPersonTableView.reloadData()
 
     }
     
@@ -102,8 +112,8 @@ class TwoPersonViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let cell4 = tableView.dequeueReusableCell(withIdentifier: "myCell4") as! TwoPersonCell
             
-            cell4.nameLabel.text = AppData.students[indexPath.row].name
-            cell4.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            cell4.nameLabel.text = availableTwoStudents[indexPath.row].name
+            cell4.gradeLabel.text = "\(availableTwoStudents[indexPath.row].grade)"
             
             return cell4
             

@@ -16,6 +16,8 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var JSAddedTableView: UITableView!
     
+    var availableJSStudents = AppData.students
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +61,17 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             //AppData.students.remove(at: AppData.selectedIndexes[i])
         }
+        
+        var numIndexes = AppData.selectedIndexes.count - 1
+        while numIndexes >= 0 {
+            availableJSStudents.remove(at: AppData.selectedIndexes[numIndexes])
+            numIndexes = numIndexes - 1
+        }
+        
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
         JSAddedTableView.reloadData()
+        jrSrTableView.reloadData()
 
     }
     
@@ -107,8 +117,8 @@ class JrSrViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let cell3 = tableView.dequeueReusableCell(withIdentifier: "myCell3") as! JrSrCell
             
-            cell3.nameLabel.text = AppData.students[indexPath.row].name
-            cell3.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            cell3.nameLabel.text = availableJSStudents[indexPath.row].name
+            cell3.gradeLabel.text = "\(availableJSStudents[indexPath.row].grade)"
             
             return cell3
             

@@ -16,6 +16,8 @@ class OralCompetitionViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBOutlet weak var oralAddedTableView: UITableView!
     
+    var availableOralStudents = AppData.students
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,9 +62,17 @@ class OralCompetitionViewController: UIViewController, UITableViewDelegate, UITa
             }
             //AppData.students.remove(at: AppData.selectedIndexes[i])
         }
+        
+        var numIndexes = AppData.selectedIndexes.count - 1
+        while numIndexes >= 0 {
+            availableOralStudents.remove(at: AppData.selectedIndexes[numIndexes])
+            numIndexes = numIndexes - 1
+        }
+        
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
         oralAddedTableView.reloadData()
+        oralCompTableView.reloadData()
 
     }
     
@@ -104,8 +114,8 @@ class OralCompetitionViewController: UIViewController, UITableViewDelegate, UITa
             
             let cell5 = tableView.dequeueReusableCell(withIdentifier: "myCell5") as! OralCompCell
             
-            cell5.nameLabel.text = AppData.students[indexPath.row].name
-            cell5.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            cell5.nameLabel.text = availableOralStudents[indexPath.row].name
+            cell5.gradeLabel.text = "\(availableOralStudents[indexPath.row].grade)"
             
             return cell5
             

@@ -16,6 +16,8 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var calcAddedTableView: UITableView!
     
+    var availableCalculatorStudents = AppData.students
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +60,17 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             //AppData.students.remove(at: AppData.selectedIndexes[i])
         }
+        
+        var numIndexes = AppData.selectedIndexes.count - 1
+        while numIndexes >= 0 {
+            availableCalculatorStudents.remove(at: AppData.selectedIndexes[numIndexes])
+            numIndexes = numIndexes - 1
+        }
+        
         AppData.indexSelected = -1
         AppData.selectedIndexes = [Int]()
         calcAddedTableView.reloadData()
+        calculatorTableView.reloadData()
 
         
     }
@@ -103,8 +113,8 @@ class CalculatorViewController: UIViewController, UITableViewDelegate, UITableVi
             
             let cell6 = tableView.dequeueReusableCell(withIdentifier: "myCell6") as! CalculatorCell
             
-            cell6.nameLabel.text = AppData.students[indexPath.row].name
-            cell6.gradeLabel.text = "\(AppData.students[indexPath.row].grade)"
+            cell6.nameLabel.text = availableCalculatorStudents[indexPath.row].name
+            cell6.gradeLabel.text = "\(availableCalculatorStudents[indexPath.row].grade)"
             
             return cell6
             
