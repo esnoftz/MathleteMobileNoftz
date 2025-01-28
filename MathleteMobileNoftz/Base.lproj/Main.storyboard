@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -220,6 +221,52 @@
             </objects>
             <point key="canvasLocation" x="1015" y="-827"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="9FU-aa-dYf">
+            <objects>
+                <viewController id="DQJ-FI-hcR" customClass="MapViewController" customModule="MathleteMobileNoftz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvT-Qf-sPt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-uM-r5q">
+                                <rect key="frame" x="0.0" y="203" width="393" height="649"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giL-Vb-VMy">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search for High Schools">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="35"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchAction:" destination="DQJ-FI-hcR" eventType="touchUpInside" id="i8d-6z-TeV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qDe-wL-xgG"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dGU-uM-r5q" firstAttribute="trailing" secondItem="qDe-wL-xgG" secondAttribute="trailing" id="C0E-2x-TxL"/>
+                            <constraint firstItem="giL-Vb-VMy" firstAttribute="top" secondItem="qDe-wL-xgG" secondAttribute="top" id="EO1-2B-LUl"/>
+                            <constraint firstItem="giL-Vb-VMy" firstAttribute="leading" secondItem="qDe-wL-xgG" secondAttribute="leading" id="Luv-Ex-DLb"/>
+                            <constraint firstItem="giL-Vb-VMy" firstAttribute="trailing" secondItem="qDe-wL-xgG" secondAttribute="trailing" id="PAe-pL-01C"/>
+                            <constraint firstAttribute="bottom" secondItem="dGU-uM-r5q" secondAttribute="bottom" id="htf-d6-BGt"/>
+                            <constraint firstItem="dGU-uM-r5q" firstAttribute="top" secondItem="qDe-wL-xgG" secondAttribute="top" constant="100" id="w3m-W7-shX"/>
+                            <constraint firstItem="dGU-uM-r5q" firstAttribute="leading" secondItem="qDe-wL-xgG" secondAttribute="leading" id="xRC-Og-r9c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cPT-IL-1Rq"/>
+                    <connections>
+                        <outlet property="mapViewOutlet" destination="dGU-uM-r5q" id="bsA-lw-sLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vf-Dn-JaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.3435114503816" y="-1117.605633802817"/>
+        </scene>
         <!--Schedule View Controller-->
         <scene sceneID="A91-as-Xp0">
             <objects>
@@ -301,7 +348,23 @@
                             <constraint firstItem="VM1-Zn-306" firstAttribute="leading" secondItem="JlB-zt-bbY" secondAttribute="leading" id="taN-Ku-QuJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Mpz-ug-Gta"/>
+                    <navigationItem key="navigationItem" id="Mpz-ug-Gta">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="cVu-GY-m0O">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NXN-TL-Q1a">
+                                <rect key="frame" x="272" y="0.0" width="105" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Map">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="DQJ-FI-hcR" kind="show" identifier="mapSegue" id="JnP-DA-gpO"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="scheduleErrorLabel" destination="I70-MX-4nK" id="2KG-XR-Fo4"/>
                         <outlet property="scheduleTableView" destination="yr2-wo-01v" id="BpG-n5-rxp"/>
@@ -310,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bje-ie-RpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="-396"/>
+            <point key="canvasLocation" x="1852.6717557251907" y="-396.47887323943667"/>
         </scene>
         <!--Schedule Profile View Controller-->
         <scene sceneID="SJc-nZ-aUT">
@@ -1199,16 +1262,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Tra-Hu-mlu">
-                                <rect key="frame" x="0.0" y="103" width="393" height="243"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="216"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jr/Sr 8-Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXJ-XY-kLg">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="51.333333333333336"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="50"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQb-LY-TrT">
-                                        <rect key="frame" x="0.0" y="66" width="393" height="65.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="57.333333333333343" width="393" height="58.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add Selected Student to Team">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -1220,7 +1283,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-W9-N1n">
-                                        <rect key="frame" x="0.0" y="137.66666666666666" width="393" height="65.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="121.66666666666664" width="393" height="58.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="View Team">
                                             <fontDescription key="titleFontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="30"/>
@@ -1233,7 +1296,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCM-A6-qGl">
-                                        <rect key="frame" x="0.0" y="209.33333333333331" width="393" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="186" width="393" height="30"/>
                                         <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
@@ -1251,7 +1314,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fV9-Tp-qYT">
-                                <rect key="frame" x="0.0" y="370" width="393" height="426"/>
+                                <rect key="frame" x="0.0" y="343" width="393" height="426"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tL2-kW-0Dl">
                                         <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="426"/>
