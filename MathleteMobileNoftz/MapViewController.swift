@@ -67,6 +67,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             for mapItem in response.mapItems {
                 
                 // use contains method to see if title of each contans "High School" to get rid of middle schools?
+                
                 self.highSchools.append(mapItem)
                 
                 let annotation = MKPointAnnotation()
